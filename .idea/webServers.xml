@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="70c0beda-fc3b-4aad-993e-6a9d7c3ffa3f" name="腾讯云服务器" url="http://132.232.101.192">
+        <fileTransfer host="132.232.101.192" port="3389" accessType="SFTP">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" />
+          </advancedOptions>
+          <option name="port" value="3389" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

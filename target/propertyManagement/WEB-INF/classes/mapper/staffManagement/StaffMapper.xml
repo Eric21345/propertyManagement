@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.propertyManagement.mapper.staffManagement.StaffMapper">
+    <select id="getMonitorList" resultType="Staff">
+        SELECT * from staff where position = 2;
+    </select>
+    <select id="getStaffList" resultType="Staff">
+        SELECT * from staff;
+    </select>
+    <select id="getStaffInfoById" resultType="Staff" parameterType="int">
+        SELECT * FROM staff where id = #{0};
+    </select>
+    <delete id="deleteStaff" parameterType="int">
+        delete from staff where id = #{0};
+    </delete>
+</mapper>

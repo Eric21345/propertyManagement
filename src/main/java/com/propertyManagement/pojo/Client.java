@@ -7,6 +7,14 @@ public class Client {
     private String name;
     private String phone;
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getAddress() {
         return address;
     }
@@ -38,4 +46,5 @@ public class Client {
     public void setPhone(String phone) {
         this.phone = phone;
     }
+
 }

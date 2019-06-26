@@ -1,34 +1,31 @@
 package com.propertyManagement.pojo;
 
-import java.sql.Date;
+import java.math.BigInteger;
 
 public class Project {
     private int id;
-    private String project_name;
+    private String name;
     private String description;
-    private int plan_num;
-    private int participate_num;
-    private long plan_money;
-    private long current_expend;
-    private Date start_date;
-    private Date end_date;
-    private String status;
-    private long contract_id;
+    private int planNum;
+    private int currentNum;
+    private BigInteger planMoney;
+    private BigInteger currentMoney;
+    private String state;
 
-    public long getContract_id() {
-        return contract_id;
+    public int getId() {
+        return id;
     }
 
-    public void setContract_id(long contract_id) {
-        this.contract_id = contract_id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public long getCurrent_expend() {
-        return current_expend;
+    public String getName() {
+        return name;
     }
 
-    public void setCurrent_expend(long current_expend) {
-        this.current_expend = current_expend;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getDescription() {
@@ -39,67 +36,43 @@ public class Project {
         this.description = description;
     }
 
-    public Date getEnd_date() {
-        return end_date;
+    public int getPlanNum() {
+        return planNum;
     }
 
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
+    public void setPlanNum(int planNum) {
+        this.planNum = planNum;
     }
 
-    public int getId() {
-        return id;
+    public int getCurrentNum() {
+        return currentNum;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setCurrentNum(int currentNum) {
+        this.currentNum = currentNum;
     }
 
-    public long getPlan_money() {
-        return plan_money;
+    public BigInteger getPlanMoney() {
+        return planMoney;
     }
 
-    public void setPlan_money(long plan_money) {
-        this.plan_money = plan_money;
+    public void setPlanMoney(BigInteger planMoney) {
+        this.planMoney = planMoney;
     }
 
-    public int getParticipate_num() {
-        return participate_num;
+    public BigInteger getCurrentMoney() {
+        return currentMoney;
     }
 
-    public void setParticipate_num(int participate_num) {
-        this.participate_num = participate_num;
+    public void setCurrentMoney(BigInteger currentMoney) {
+        this.currentMoney = currentMoney;
     }
 
-    public int getPlan_num() {
-        return plan_num;
+    public String getState() {
+        return state;
     }
 
-    public void setPlan_num(int plan_num) {
-        this.plan_num = plan_num;
-    }
-
-    public Date getStart_date() {
-        return start_date;
-    }
-
-    public void setStart_date(Date start_date) {
-        this.start_date = start_date;
-    }
-
-    public String getProject_name() {
-        return project_name;
-    }
-
-    public void setProject_name(String project_name) {
-        this.project_name = project_name;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
+    public void setState(String state) {
+        this.state = state;
     }
 }

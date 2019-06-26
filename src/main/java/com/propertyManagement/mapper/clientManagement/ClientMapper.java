@@ -6,7 +6,7 @@ import com.propertyManagement.pojo.Client;
 import java.util.List;
 
 public interface ClientMapper {
-    List<Client> selectClient(String name, String company, String phone, String address);
+    Client selectClient(String name, String company, String phone, String address);
     List<Client> selectClient2(String name, String company, String phone);
     List<Client> selectClient3(String name, String company, String address);
     List<Client> selectClient4(String name, String phone, String address);
@@ -23,6 +23,9 @@ public interface ClientMapper {
     List<Client> selectClient15(String address);
     List<Client> selectClient16();
     void deleteByPhone(String phone);
-    void addClient(Client client);
+    void addClient(String name, String company, String phone, String address);
+    void editClient(Client client);
+    List<Client> getClientList();
+    Client getClientInfoById(int id);
 
 }

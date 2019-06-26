@@ -3,12 +3,17 @@ package com.propertyManagement.pojo;
 import java.sql.Date;
 
 public class Staff {
+    private int id;
     private String name;
+    private String phone;
     private String sex;
     private String idCard;
+    private String company;
     private Date birthDate;
     private Date workDate;
     private String openid;
+    private String position;
+    private int taskId;
 
     public String getName() {
         return name;
@@ -46,6 +51,38 @@ public class Staff {
         return sex;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public String getCompany() {
+        return company;
+    }
+
+    public void setCompany(String company) {
+        this.company = company;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
+    }
+
     public void setSex(String sex) {
         this.sex = sex;
     }
@@ -56,5 +93,13 @@ public class Staff {
 
     public void setWorkDate(Date workDate) {
         this.workDate = workDate;
+    }
+
+    public int getTaskId() {
+        return taskId;
+    }
+
+    public void setTaskId(int taskId) {
+        this.taskId = taskId;
     }
 }

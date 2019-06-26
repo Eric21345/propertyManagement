@@ -9,4 +9,13 @@
     <insert id="addStaff" parameterType="Staff">
         INSERT into staff(name, sex, idCard, birthDate, workDate, openid) values (#{name}, #{sex}, #{idCard}, #{birthDate}, #{workDate}, #{openid});
     </insert>
+    <select id="listAccount" resultType="Account">
+        SELECT * from account;
+    </select>
+    <insert id="addAccount" parameterType="Account">
+        INSERT INTO account(openid, phone, password) values (#{openid}, #{phone}, #{password});
+    </insert>
+    <select id="getPasswordByPhone" parameterType="String" resultType="String">
+        SELECT password from account WHERE phone = #{0};
+    </select>
 </mapper>

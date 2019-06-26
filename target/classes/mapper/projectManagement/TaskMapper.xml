@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.propertyManagement.mapper.projectManagement.TaskMapper">
+    <select id="getTaskList" resultType="Task">
+        SELECT *  FROM task;
+    </select>
+    <select id="getTaskInfo" resultType="Task" parameterType="int">
+        SELECT * FROM task where id = #{0};
+    </select>
+    <delete id="deleteTask" parameterType="int">
+        DELETE FROM task WHERE id = #{0};
+    </delete>
+    <update id="updateTaskInfo">
+        UPDATE task SET name = #{1}, description = #{2}, planNum = #{3}, currentNum = #{4} where id = #{0};
+    </update>
+</mapper>

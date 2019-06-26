@@ -29,4 +29,6 @@
     <!-- 对上传文件的解析-->
     <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
 
+    <bean class="com.propertyManagement.config.SwaggerConfig"/>
+    <mvc:resources mapping="/swagger/**" location="/WEB-INF/swagger/"/>
 </beans>

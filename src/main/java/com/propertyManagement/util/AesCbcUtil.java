@@ -17,7 +17,8 @@ import java.security.spec.InvalidParameterSpecException;
 /**
  * AES-128-CBC 加密方式 注： AES-128-CBC可以自己定义“密钥”和“偏移量“。 AES-128是jdk自动生成的“密钥”。
  */
-public class AesCbcUtil {
+public class
+AesCbcUtil {
 
     static {
         // BouncyCastle是一个开源的加解密解决方案，主页在http://www.bouncycastle.org/

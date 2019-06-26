@@ -1,71 +1,25 @@
 package com.propertyManagement.pojo;
 
+import java.math.BigInteger;
 import java.sql.Date;
 
 public class Contract {
     private int id;
-    private String company_name;
-    private int client_id;
-    private Date start_date;
-    private Date end_date;
-    private String work_type;
-    private String work_content;
-    private long cost;
-    private String frequency;
-    private String status;
+    private String name;
+    private Date startDate;
+    private Date endDate;
+    private String workType;
+    private String workContent;
+    private BigInteger totalMoney;
+    private int frequency;
+    private String state;
     private String remark;
     private int receive;
-    private long receive_money;
-    private Date last_receive;
-
-    public String getCompany_name() {
-        return company_name;
-    }
-
-    public Date getEnd_date() {
-        return end_date;
-    }
-
-    public long getReceive_money() {
-        return receive_money;
-    }
-
-    public void setReceive_money(long receive_money) {
-        this.receive_money = receive_money;
-    }
-
-    public void setEnd_date(Date end_date) {
-        this.end_date = end_date;
-    }
-
-    public String getFrequency() {
-        return frequency;
-    }
-
-    public void setFrequency(String frequency) {
-        this.frequency = frequency;
-    }
-
-    public void setCompany_name(String company_name) {
-        this.company_name = company_name;
-    }
-
-
-    public int getClient_id() {
-        return client_id;
-    }
-
-    public void setClient_id(int client_id) {
-        this.client_id = client_id;
-    }
-
-    public long getCost() {
-        return cost;
-    }
-
-    public void setCost(long cost) {
-        this.cost = cost;
-    }
+    private BigInteger receiveMoney;
+    private BigInteger lastReceive;
+    private int clientId;
+    private int companyId;
+    private int projectId;
 
     public int getId() {
         return id;
@@ -75,36 +29,68 @@ public class Contract {
         this.id = id;
     }
 
-    public Date getLast_receive() {
-        return last_receive;
+    public String getName() {
+        return name;
     }
 
-    public void setLast_receive(Date last_receive) {
-        this.last_receive = last_receive;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getStatus() {
-        return status;
+    public Date getStartDate() {
+        return startDate;
     }
 
-    public void setStatus(String status) {
-        this.status = status;
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
     }
 
-    public int getReceive() {
-        return receive;
+    public Date getEndDate() {
+        return endDate;
     }
 
-    public void setReceive(int receive) {
-        this.receive = receive;
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 
-    public Date getStart_date() {
-        return start_date;
+    public String getWorkType() {
+        return workType;
     }
 
-    public void setStart_date(Date start_date) {
-        this.start_date = start_date;
+    public void setWorkType(String workType) {
+        this.workType = workType;
+    }
+
+    public String getWorkContent() {
+        return workContent;
+    }
+
+    public void setWorkContent(String workContent) {
+        this.workContent = workContent;
+    }
+
+    public BigInteger getTotalMoney() {
+        return totalMoney;
+    }
+
+    public void setTotalMoney(BigInteger totalMoney) {
+        this.totalMoney = totalMoney;
+    }
+
+    public int getFrequency() {
+        return frequency;
+    }
+
+    public void setFrequency(int frequency) {
+        this.frequency = frequency;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 
     public String getRemark() {
@@ -115,19 +101,51 @@ public class Contract {
         this.remark = remark;
     }
 
-    public String getWork_content() {
-        return work_content;
+    public int getReceive() {
+        return receive;
     }
 
-    public void setWork_content(String work_content) {
-        this.work_content = work_content;
+    public void setReceive(int receive) {
+        this.receive = receive;
     }
 
-    public String getWork_type() {
-        return work_type;
+    public BigInteger getReceiveMoney() {
+        return receiveMoney;
     }
 
-    public void setWork_type(String work_type) {
-        this.work_type = work_type;
+    public void setReceiveMoney(BigInteger receiveMoney) {
+        this.receiveMoney = receiveMoney;
+    }
+
+    public BigInteger getLastReceive() {
+        return lastReceive;
+    }
+
+    public void setLastReceive(BigInteger lastReceive) {
+        this.lastReceive = lastReceive;
+    }
+
+    public int getClientId() {
+        return clientId;
+    }
+
+    public void setClientId(int clientId) {
+        this.clientId = clientId;
+    }
+
+    public int getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(int companyId) {
+        this.companyId = companyId;
+    }
+
+    public int getProjectId() {
+        return projectId;
+    }
+
+    public void setProjectId(int projectId) {
+        this.projectId = projectId;
     }
 }

@@ -13,8 +13,8 @@ public class ClientService {
     private ClientMapper clientMapper;
 
     public void deleteByPhone(String phone){clientMapper.deleteByPhone(phone);}
-    public void addClient(Client client){clientMapper.addClient(client);}
-    public List<Client> selectClient(String name, String company, String phone, String address){
+    public void addClient(String name, String company, String phone, String address){clientMapper.addClient(name, company, phone, address);}
+    public Client selectClient(String name, String company, String phone, String address){
         return clientMapper.selectClient(name, company, phone, address);
     }
     public List<Client> selectClient2(String name, String company, String phone){
@@ -63,4 +63,9 @@ public class ClientService {
         return clientMapper.selectClient16();
     }
 
+    public void editClient(Client client){ clientMapper.editClient(client);}
+
+    public List<Client> getClientList(){ return clientMapper.getClientList();}
+
+    public Client getClientInfoById(int id) { return clientMapper.getClientInfoById(id);}
 }

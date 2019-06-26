@@ -4,7 +4,10 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="com.propertyManagement.mapper.clientManagement.ClientMapper">
-    <select id="selectClient" resultType="Client">
+    <select id="getClientList" resultType="Client">
+        SELECT * FROM client;
+    </select>
+    <select id="selectClient" resultType="Client" parameterType="String">
         SELECT * FROM client WHERE name = #{0} and company = #{1} and phone = #{2} and address = #{3};
     </select>
     <select id="selectClient2" resultType="Client">
@@ -52,13 +55,18 @@
     <select id="selectClient16" resultType="Client">
         SELECT * FROM client;
     </select>
-
+    <select id="getClientInfoById"  resultType="Client" parameterType="int">
+        SELECT * FROM client WHERE id = #{0};
+    </select>
 
     <delete id="deleteByPhone" parameterType="String">
         DELETE FROM client WHERE phone = #{phone};
     </delete>
     <insert id="addClient" parameterType="Client">
-        INSERT INTO client(name, company, phone, address) VALUES (#(name), #(company), #(phone), #(address));
+        INSERT INTO client(name, company, phone, address) VALUES (#{0}, #{1}, #{2}, #{3});
     </insert>
-
+    <update id="editClient" parameterType="Client">
+        UPDATE client SET client.name = #{name}, client.company = #{company}, client.phone = #{phone}, client.address =
+        #{address} WHERE client.id = #{id};
+    </update>
 </mapper>

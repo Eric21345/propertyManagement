@@ -1,10 +1,10 @@
 package com.propertyManagement.controller.login;
 
 
-import com.propertyManagement.pojo.Account;
-import com.propertyManagement.pojo.ManageStaff;
-import com.propertyManagement.pojo.Staff;
+import com.propertyManagement.pojo.*;
+import com.propertyManagement.service.Login.AuthenticationService;
 import com.propertyManagement.service.Login.LoginService;
+import com.propertyManagement.service.staffManagement.StaffService;
 import com.propertyManagement.util.AesCbcUtil;
 import com.propertyManagement.util.HttpRequest;
 import net.sf.json.JSONObject;
@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +26,11 @@ import java.util.Map;
 public class LoginController {
     @Autowired
     private LoginService loginService;
+    @Autowired
+    private StaffService staffService;
+    @Autowired
+    private AuthenticationService authenticationService;
+
     private String identifyingCode2;
 
     @SuppressWarnings("unchecked")
@@ -41,9 +48,9 @@ public class LoginController {
         }
 
         //小程序的唯一标识
-        String wxAppId = "wx9e4a9cdd231690a7";
+        String wxAppId = "wxbbb4709fb682a3a2";
         //小程序的app secret
-        String wxAppSecret = "72dce88bdc8e622a0727af89369f419b";
+        String wxAppSecret = "12c22d53a9c8476f143f572a6eabc80e";
         //授权
         String grantType = "authorization_code";
         //请求参数
@@ -65,7 +72,7 @@ public class LoginController {
                 map.put("status", 1);
                 map.put("msg", "解密成功");
                 HashMap userinfo = new HashMap<>();
-                userinfo.put("openid", json.get("openid"));
+                userinfo.put("openId", json.get("openid"));
                 userinfo.put("session_key", json.get("session_key"));
                 map.put("userInfo", userinfo);
             }
@@ -76,6 +83,78 @@ public class LoginController {
 
         return map;
     }
+
+    //判断openId是否在数据库中实名注册
+    @SuppressWarnings("unchecked")
+    @RequestMapping("authentication")
+    @ResponseBody
+    public Map authentication(@RequestParam("openId") String openId){
+        Map map = new HashMap();
+        Authentication authentication = authenticationService.getAuthenticationByOpenId(openId);
+        if(authentication == null){
+            map.put("state", -1);
+        }else {
+            int state = authentication.getState();
+            if(state == 0) map.put("state", 0);
+            else {
+                map.put("state", 1);
+                Staff staff = staffService.getStaffByOpenId(openId);
+                map.put("staffInfo", staff);
+            }
+        }
+        map.put("status", 1);
+        return map;
+    }
+
+    //员工提交认证申请
+    @SuppressWarnings("unchecked")
+    @RequestMapping("authenticationApply")
+    @ResponseBody
+    public Map authenticationApply(@RequestParam("name") String name,
+                                   @RequestParam("companyId") int companyId,
+                                   @RequestParam("idCard") String idCard,
+                                   @RequestParam("sex") String sex,
+                                   @RequestParam("position") int  position,
+                                   @RequestParam("birthDate") String birthDate,
+                                   @RequestParam("workDate") String workDate,
+                                   @RequestParam("phone") String phone,
+                                   @RequestParam("openId") String openId) throws ParseException{
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Staff staff = new Staff();
+        staff.setName(name);
+        staff.setCompanyId(companyId);
+        staff.setIdCard(idCard);
+        staff.setSex(sex);
+        staff.setPosition(position);
+        staff.setBirthDate(new Date(sdf.parse(birthDate).getTime()));
+        staff.setWorkDate(new Date(sdf.parse(workDate).getTime()));
+        staff.setPhone(phone);
+        staff.setType(0);
+        //这里需要对authentication表和staff表进行操作
+        staffService.addApplyStaff(staff);
+        int staffId = staff.getId();
+        System.out.println(staffId);
+        //将staff的id与openId一起存入authentication表
+        authenticationService.addAuthentication(openId, staffId, 0);
+        Map map = new HashMap();
+        map.put("status", 1);
+        return map;
+    }
+
+    //获取公司列表
+    @SuppressWarnings("unchecked")
+    @RequestMapping("getCompanyList")
+    @ResponseBody
+    public Map getCompanyList(){
+        Map map = new HashMap();
+        List<Company> companyList = authenticationService.getCompanyList();
+        map.put("companyList", companyList);
+        map.put("status", 1);
+        return map;
+    }
+
+    //
+
 
 //    @SuppressWarnings("unchecked")
 //    @RequestMapping("register")
@@ -168,11 +247,6 @@ public class LoginController {
         return map;
     }
 
-    //手机号登录
-    /**
-     * 这里需要防止同一账号重复登录
-     *
-     * **/
     @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping(value = "phoneLogin", method = RequestMethod.POST)
@@ -192,10 +266,6 @@ public class LoginController {
         }
         return map;
     }
-
-    /**
-     * 判断是否出现顶号
-     * **/
 
 
 }

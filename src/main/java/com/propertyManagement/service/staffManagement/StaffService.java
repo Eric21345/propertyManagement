@@ -5,6 +5,7 @@ import com.propertyManagement.pojo.Staff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
 import java.util.List;
 
 @Service
@@ -27,4 +28,18 @@ public class StaffService {
     public void deleteStaff(int id){
         staffMapper.deleteStaff(id);
     }
+
+    public Staff getStaffByOpenId(String openId){
+        return staffMapper.getStaffByOpenId(openId);
+    }
+
+    public int addApplyStaff(Staff staff){
+        return staffMapper.addApplyStaff(staff);
+    }
+
+    public void updateStaffTypeById(int staffId){
+        staffMapper.updateStaffTypeById(staffId);
+    }
+
+
 }

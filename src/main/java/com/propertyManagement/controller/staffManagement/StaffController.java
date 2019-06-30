@@ -1,6 +1,7 @@
 package com.propertyManagement.controller.staffManagement;
 
 import com.propertyManagement.pojo.Staff;
+import com.propertyManagement.service.Login.AuthenticationService;
 import com.propertyManagement.service.staffManagement.StaffService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -8,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,6 +19,8 @@ import java.util.Map;
 public class StaffController {
     @Autowired
     private StaffService staffService;
+    @Autowired
+    private AuthenticationService authenticationService;
 
     //获取员工列表
     @RequestMapping("getStaffList")
@@ -51,5 +56,19 @@ public class StaffController {
         return map;
     }
 
-
+    //管理人员处理员工认证申请
+    @ResponseBody
+    @RequestMapping("handleAuthentication")
+    public Map addAuthentication(@RequestParam("authenticationId") int authenticationId,
+                                 @RequestParam("handler") Staff handler){
+        //需要对两张表进行操作
+        //staff表更新type字段信息，authentication表更新处理信息
+        //获取被处理员工的id并更新staff表
+        staffService.updateStaffTypeById(authenticationService.getStaffIdByAuthenticationId(authenticationId));
+        //更新authentication表
+        authenticationService.updateAuthentication(handler.getId(), new Date(), 1, authenticationId);
+        Map map = new HashMap();
+        map.put("status", 1);
+        return map;
+    }
 }

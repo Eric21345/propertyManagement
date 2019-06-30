@@ -12,7 +12,21 @@
     <select id="getStaffInfoById" resultType="Staff" parameterType="int">
         SELECT * FROM staff where id = #{0};
     </select>
+    <select id="getStaffByOpenId" resultType="Staff" parameterType="String">
+        SELECT * FROM staff WHERE id = (SELECT staffId from authentication where openId = #{0})
+    </select>
     <delete id="deleteStaff" parameterType="int">
         delete from staff where id = #{0};
     </delete>
+    <insert id="addApplyStaff" parameterType="Staff">
+        INSERT INTO staff(name, idCard, companyId, sex, position, birthDate, workDate, type, phone)
+        VALUES (#{name}, #{idCard}, #{companyId}, #{sex}, #{position}, #{birthDate}, #{workDate}, #{type}, #{phone});
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+          SELECT LAST_INSERT_ID();
+        </selectKey>
+    </insert>
+    <update id="updateStaffTypeById">
+        UPDATE staff set type = 1 WHERE id = #{0};
+    </update>
+
 </mapper>

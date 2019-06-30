@@ -1,12 +1,11 @@
 package com.propertyManagement.pojo;
 
-public class company {
+public class Company {
     private int id;
     private String name;
     private String address;
     private String phone;
-    private String boss;
-    private String bossPhone;
+    private int bossId;
 
     public int getId() {
         return id;
@@ -40,19 +39,11 @@ public class company {
         this.phone = phone;
     }
 
-    public String getBoss() {
-        return boss;
+    public int getBossId() {
+        return bossId;
     }
 
-    public void setBoss(String boss) {
-        this.boss = boss;
-    }
-
-    public String getBossPhone() {
-        return bossPhone;
-    }
-
-    public void setBossPhone(String bossPhone) {
-        this.bossPhone = bossPhone;
+    public void setBossId(int bossId) {
+        this.bossId = bossId;
     }
 }

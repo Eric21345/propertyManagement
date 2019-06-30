@@ -224,7 +224,7 @@ public class ProjectController {
                            @RequestParam("receiveMoney") BigInteger receiveMoney,
                            @RequestParam("remark") String remark,
                            @RequestParam("clientName") String clientName,
-                           @RequestParam("company") String company,
+                           @RequestParam("Company") String company,
                            @RequestParam("phone") String phone,
                            @RequestParam("address") String address) throws ParseException{
         //判断数据库中客户是否存在

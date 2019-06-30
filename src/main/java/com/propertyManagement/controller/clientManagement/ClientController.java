@@ -27,49 +27,49 @@ public class ClientController {
         String phone = terms[2];
         String address = terms[3];
         List<Client> clients;
-//        if(!name.equals("") && !company.equals("") && !phone.equals("") && !address.equals("")){
-//            clients = clientService.selectClient(name, company, phone, address);
+//        if(!name.equals("") && !Company.equals("") && !phone.equals("") && !address.equals("")){
+//            clients = clientService.selectClient(name, Company, phone, address);
 //        }
-//        else if(!name.equals("") && !company.equals("") && !phone.equals("") && address.equals("")){
-//            clients = clientService.selectClient2(name, company, phone);
+//        else if(!name.equals("") && !Company.equals("") && !phone.equals("") && address.equals("")){
+//            clients = clientService.selectClient2(name, Company, phone);
 //        }
-//        else if(!name.equals("") && !company.equals("") && phone.equals("") && !address.equals("")){
-//            clients = clientService.selectClient3(name, company, address);
+//        else if(!name.equals("") && !Company.equals("") && phone.equals("") && !address.equals("")){
+//            clients = clientService.selectClient3(name, Company, address);
 //        }
-//        else if(!name.equals("") && company.equals("") && !phone.equals("") && !address.equals("")){
+//        else if(!name.equals("") && Company.equals("") && !phone.equals("") && !address.equals("")){
 //            clients = clientService.selectClient4(name, phone, address);
 //        }
-//        else if(name.equals("") && !company.equals("") && !phone.equals("") && !address.equals("")){
-//            clients = clientService.selectClient5(company, phone, address);
+//        else if(name.equals("") && !Company.equals("") && !phone.equals("") && !address.equals("")){
+//            clients = clientService.selectClient5(Company, phone, address);
 //        }
-//        else if(!name.equals("") && !company.equals("") && phone.equals("") && address.equals("")){
-//            clients = clientService.selectClient6(name, company);
+//        else if(!name.equals("") && !Company.equals("") && phone.equals("") && address.equals("")){
+//            clients = clientService.selectClient6(name, Company);
 //        }
-//        else if(!name.equals("") && company.equals("") && !phone.equals("") && address.equals("")){
+//        else if(!name.equals("") && Company.equals("") && !phone.equals("") && address.equals("")){
 //            clients = clientService.selectClient7(name, phone);
 //        }
-//        else if(!name.equals("") && company.equals("") && phone.equals("") && !address.equals("")){
+//        else if(!name.equals("") && Company.equals("") && phone.equals("") && !address.equals("")){
 //            clients = clientService.selectClient8(name, address);
 //        }
-//        else if(name.equals("") && !company.equals("") && !phone.equals("") && address.equals("")){
-//            clients = clientService.selectClient9(company, phone);
+//        else if(name.equals("") && !Company.equals("") && !phone.equals("") && address.equals("")){
+//            clients = clientService.selectClient9(Company, phone);
 //        }
-//        else if(name.equals("") && !company.equals("") && phone.equals("") && !address.equals("")){
-//            clients = clientService.selectClient10(company, address);
+//        else if(name.equals("") && !Company.equals("") && phone.equals("") && !address.equals("")){
+//            clients = clientService.selectClient10(Company, address);
 //        }
-//        else if(name.equals("") && company.equals("") && !phone.equals("") && !address.equals("")){
+//        else if(name.equals("") && Company.equals("") && !phone.equals("") && !address.equals("")){
 //            clients = clientService.selectClient11(phone, address);
 //        }
-//        else if(!name.equals("") && company.equals("") && phone.equals("") && address.equals("")){
+//        else if(!name.equals("") && Company.equals("") && phone.equals("") && address.equals("")){
 //            clients = clientService.selectClient12(name);
 //        }
-//        else if(name.equals("") && !company.equals("") && phone.equals("") && address.equals("")){
-//            clients = clientService.selectClient13(company);
+//        else if(name.equals("") && !Company.equals("") && phone.equals("") && address.equals("")){
+//            clients = clientService.selectClient13(Company);
 //        }
-//        else if(name.equals("") && company.equals("") && !phone.equals("") && address.equals("")){
+//        else if(name.equals("") && Company.equals("") && !phone.equals("") && address.equals("")){
 //            clients = clientService.selectClient14(phone);
 //        }
-//        else if(name.equals("") && company.equals("") && phone.equals("") && !address.equals("")){
+//        else if(name.equals("") && Company.equals("") && phone.equals("") && !address.equals("")){
 //            clients = clientService.selectClient15(address);
 //        }
 //        else {

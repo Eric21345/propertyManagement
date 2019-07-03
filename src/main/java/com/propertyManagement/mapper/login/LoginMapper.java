@@ -13,5 +13,5 @@ public interface LoginMapper {
     List<Account> listAccount();
     void addAccount(Account account);
     String getPasswordByPhone(String phone);
-
+    String getCompanyNameById(int id);
 }

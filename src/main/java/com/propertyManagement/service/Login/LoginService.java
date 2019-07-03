@@ -19,5 +19,7 @@ public class LoginService {
     public List<Account> listAccount(){return loginMapper.listAccount();}
     public void addAccount(Account account){loginMapper.addAccount(account);}
     public String getPasswordByPhone(String phone){return loginMapper.getPasswordByPhone(phone);}
-
+    public String getCompanyNameById(int id){
+        return loginMapper.getCompanyNameById(id);
+    }
 }

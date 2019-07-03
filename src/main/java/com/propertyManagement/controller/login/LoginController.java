@@ -7,6 +7,7 @@ import com.propertyManagement.service.Login.LoginService;
 import com.propertyManagement.service.staffManagement.StaffService;
 import com.propertyManagement.util.AesCbcUtil;
 import com.propertyManagement.util.HttpRequest;
+import com.sun.org.glassfish.external.amx.AMX;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.sql.Date;
+import java.sql.SQLTransactionRollbackException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
@@ -96,12 +98,11 @@ public class LoginController {
         }else {
             int state = authentication.getState();
             if(state == 0) map.put("state", 0);
-            else {
-                map.put("state", 1);
-                Staff staff = staffService.getStaffByOpenId(openId);
-                map.put("staffInfo", staff);
-            }
+            else map.put("state", 1);
+            Staff staff = staffService.getStaffByOpenId(openId);
+            map.put("staffInfo", staff);
         }
+
         map.put("status", 1);
         return map;
     }
@@ -153,7 +154,17 @@ public class LoginController {
         return map;
     }
 
-    //
+    //依据公司id获取公司名称
+    @SuppressWarnings("unchecked")
+    @RequestMapping("getCompanyNameById")
+    @ResponseBody
+    public Map getCompanyNameById(@RequestParam("id") int id){
+        Map map = new HashMap();
+        String companyName = loginService.getCompanyNameById(id);
+        map.put("status", 1);
+        map.put("companyName", companyName);
+        return map;
+    }
 
 
 //    @SuppressWarnings("unchecked")

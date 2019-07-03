@@ -28,5 +28,10 @@
     <update id="updateStaffTypeById">
         UPDATE staff set type = 1 WHERE id = #{0};
     </update>
-
+    <select id="getStaffListByCompanyId" resultType="Staff">
+        SELECT * FROM staff where companyId = #{0} ORDER BY workDate;
+    </select>
+    <select id="getStaffListByNameStr" resultType="Staff">
+        SELECT * FROM staff where name LIKE #{0};
+    </select>
 </mapper>

@@ -41,5 +41,11 @@ public class StaffService {
         staffMapper.updateStaffTypeById(staffId);
     }
 
+    public List<Staff> getStaffListByCompanyId(int companyId){
+        return staffMapper.getStaffListByCompanyId(companyId);
+    }
 
+    public List<Staff> getStaffListByNameStr(String nameStr){
+        return staffMapper.getStaffListByNameStr(nameStr);
+    }
 }

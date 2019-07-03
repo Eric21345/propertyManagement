@@ -39,10 +39,10 @@ public class StaffController {
     @ResponseBody
     @RequestMapping("getStaffInfoById")
     public Map getStaffInfoById(@RequestParam("id") int id){
-        Staff staff = staffService.getStaffInfoById(id);
+        Staff staffInfo = staffService.getStaffInfoById(id);
         Map map = new HashMap();
         map.put("status", 1);
-        map.put("staff", staff);
+        map.put("staffInfo", staffInfo);
         return map;
     }
 
@@ -71,4 +71,30 @@ public class StaffController {
         map.put("status", 1);
         return map;
     }
+
+    //获取公司所有员工
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getStaffListByCompanyId")
+    public Map getStaffListByCompanyId(@RequestParam("companyId") int companyId){
+        Map map = new HashMap();
+        List<Staff> staffList = staffService.getStaffListByCompanyId(companyId);
+        map.put("status", 1);
+        map.put("staffList", staffList);
+        return map;
+    }
+
+    //依据员工姓名模糊查询员工
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getStaffListByNameStr")
+    public Map getStaffListByNameStr(@RequestParam("nameStr") String nameStr){
+        Map map = new HashMap();
+        List<Staff> staffList = staffService.getStaffListByNameStr(nameStr);
+        map.put("status", 1);
+        map.put("staffList", staffList);
+        return map;
+    }
+
+
 }

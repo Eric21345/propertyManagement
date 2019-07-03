@@ -13,5 +13,6 @@ public interface StaffMapper {
     Staff getStaffByOpenId(String openId);
     int addApplyStaff(Staff staff);
     void updateStaffTypeById(int staffId);
-
+    List<Staff> getStaffListByCompanyId(int companyId);
+    List<Staff> getStaffListByNameStr(String nameStr);
 }

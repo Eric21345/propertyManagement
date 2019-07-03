@@ -1,5 +1,7 @@
 package com.propertyManagement.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.sql.Date;
 
 public class Staff {
@@ -63,6 +65,7 @@ public class Staff {
         this.companyId = companyId;
     }
 
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "Asia/Shanghai")
     public Date getBirthDate() {
         return birthDate;
     }
@@ -71,6 +74,7 @@ public class Staff {
         this.birthDate = birthDate;
     }
 
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "Asia/Shanghai")
     public Date getWorkDate() {
         return workDate;
     }

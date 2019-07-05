@@ -10,4 +10,8 @@ public interface TaskMapper {
     void updateTaskInfo(int taskId, String name, String description, int planNum, int currentNum);
     void deleteTask(int taskId);
     void addTask(String name, String description, int planNum, int currentNum, int projectId);
+    List<Task> getTaskListByProjectId(int projectId);
+    List<Integer> getTaskIdListByStaffId(int staffId);
+    void deleteStaffFromTask(int staffId, int taskId);
+    void addStaffIntoTask(int staffId, int taskId);
 }

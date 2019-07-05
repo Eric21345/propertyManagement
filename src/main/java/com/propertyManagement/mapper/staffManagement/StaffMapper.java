@@ -1,6 +1,7 @@
 package com.propertyManagement.mapper.staffManagement;
 
 import com.propertyManagement.pojo.Staff;
+import com.propertyManagement.pojo.Task;
 
 import java.util.Date;
 import java.util.List;
@@ -15,4 +16,5 @@ public interface StaffMapper {
     void updateStaffTypeById(int staffId);
     List<Staff> getStaffListByCompanyId(int companyId);
     List<Staff> getStaffListByNameStr(String nameStr);
+    void deleteTaskByStaffIdAndTaskId(int taskId);
 }

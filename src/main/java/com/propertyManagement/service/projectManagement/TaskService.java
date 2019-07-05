@@ -31,4 +31,20 @@ public class TaskService {
     public void addTask(String name, String description, int planNum, int currentNum, int projectId){
         taskMapper.addTask(name, description, planNum, currentNum, projectId);
     }
+
+    public List<Task> getTaskListByProjectId(int projectId){
+        return taskMapper.getTaskListByProjectId(projectId);
+    }
+
+    public List<Integer> getTaskIdListByStaffId(int staffId){
+        return taskMapper.getTaskIdListByStaffId(staffId);
+    }
+
+    public void deleteStaffFromTask(int staffId, int taskId){
+        taskMapper.deleteStaffFromTask(staffId, taskId);
+    }
+
+    public void addStaffIntoTask(int staffId, int taskId){
+        taskMapper.addStaffIntoTask(staffId, taskId);
+    }
 }

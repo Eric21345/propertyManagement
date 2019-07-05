@@ -15,4 +15,16 @@
     <update id="updateTaskInfo">
         UPDATE task SET name = #{1}, description = #{2}, planNum = #{3}, currentNum = #{4} where id = #{0};
     </update>
+    <select id="getTaskListByProjectId" resultType="Task">
+        SELECT * FROM task WHERE projectId = #{0};
+    </select>
+    <select id="getTaskIdListByStaffId" resultType="Integer">
+        SELECT taskID FROM participate WHERE staffId = #{0};
+    </select>
+    <delete id="deleteStaffFromTask">
+        DELETE FROM participate WHERE staffId = #{0} and taskId = #{1};
+    </delete>
+    <insert id="addStaffIntoTask">
+        INSERT INTO participate(staffId, taskId) VALUES (#{0}, #{1});
+    </insert>
 </mapper>

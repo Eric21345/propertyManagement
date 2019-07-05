@@ -213,9 +213,6 @@ public class LoginController {
 
 
 
-
-        map.put("status", 1);
-        map.put("msg", "获取验证码成功");
         return map;
     }
 

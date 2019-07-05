@@ -85,4 +85,16 @@ public class TaskController {
         return map;
     }
 
+    //查询项目对应的岗位
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getTaskListByProjectId")
+    public Map getTaskListByProjectId(@RequestParam("projectId") int projectId){
+        Map map = new HashMap();
+
+        map.put("status", 1);
+        return map;
+    }
+
+
 }

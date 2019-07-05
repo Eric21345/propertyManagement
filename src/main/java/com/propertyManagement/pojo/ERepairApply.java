@@ -55,7 +55,7 @@ public class ERepairApply {
     public void setApplyDate(Date applyDate) {
         this.applyDate = applyDate;
     }
-    
+
     public int getHandleId() {
         return handleId;
     }

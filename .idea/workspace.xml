@@ -6,200 +6,109 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7dade040-1a4c-44c1-a0f0-40e22c3b0ba2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/util/TaskCollection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/controller/login/LoginController.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/controller/login/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/controller/projectManagement/TaskController.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/controller/projectManagement/TaskController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/controller/staffManagement/StaffController.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/controller/staffManagement/StaffController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/mapper/login/LoginMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/mapper/login/LoginMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/mapper/projectManagement/TaskMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/mapper/projectManagement/TaskMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/mapper/staffManagement/StaffMapper.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/mapper/staffManagement/StaffMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/pojo/ERepairApply.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/pojo/ERepairApply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/pojo/EUseApply.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/pojo/EUseApply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/pojo/Staff.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/pojo/Staff.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/service/Login/LoginService.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/service/Login/LoginService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/service/projectManagement/TaskService.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/service/projectManagement/TaskService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/propertyManagement/service/staffManagement/StaffService.class" afterPath="$PROJECT_DIR$/target/classes/com/propertyManagement/service/staffManagement/StaffService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/controller/login/LoginController.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/controller/login/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/controller/projectManagement/TaskController.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/controller/projectManagement/TaskController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/controller/staffManagement/StaffController.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/controller/staffManagement/StaffController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/mapper/login/LoginMapper.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/mapper/login/LoginMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/mapper/projectManagement/TaskMapper.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/mapper/projectManagement/TaskMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/mapper/staffManagement/StaffMapper.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/mapper/staffManagement/StaffMapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/pojo/ERepairApply.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/pojo/ERepairApply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/pojo/EUseApply.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/pojo/EUseApply.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/pojo/Staff.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/pojo/Staff.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/service/Login/LoginService.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/service/Login/LoginService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/service/projectManagement/TaskService.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/service/projectManagement/TaskService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/service/staffManagement/StaffService.class" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/com/propertyManagement/service/staffManagement/StaffService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../ylpm/ylpm.war" afterPath="$PROJECT_DIR$/../ylpm/ylpm.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/login/LoginController.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/login/LoginController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/projectManagement/TaskController.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/projectManagement/TaskController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/staffManagement/StaffController.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/staffManagement/StaffController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/login/LoginMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/login/LoginMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/projectManagement/TaskMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/projectManagement/TaskMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/staffManagement/StaffMapper.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/staffManagement/StaffMapper.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/ERepairApply.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/ERepairApply.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/EUseApply.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/EUseApply.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Staff.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Staff.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/service/Login/LoginService.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/service/Login/LoginService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/service/projectManagement/TaskService.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/service/projectManagement/TaskService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/propertyManagement/service/staffManagement/StaffService.java" afterPath="$PROJECT_DIR$/src/main/java/com/propertyManagement/service/staffManagement/StaffService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/Login/LoginMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/Login/LoginMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/projectManagement/TaskMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/projectManagement/TaskMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/mapper/staffManagement/StaffMapper.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/staffManagement/StaffMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/Login/LoginMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/Login/LoginMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/projectManagement/TaskMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/projectManagement/TaskMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/mapper/staffManagement/StaffMapper.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/staffManagement/StaffMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/mapper/Login/LoginMapper.xml" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/mapper/Login/LoginMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/mapper/projectManagement/TaskMapper.xml" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/mapper/projectManagement/TaskMapper.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/mapper/staffManagement/StaffMapper.xml" afterPath="$PROJECT_DIR$/target/propertyManagement/WEB-INF/classes/mapper/staffManagement/StaffMapper.xml" />
-    </list>
+    <list default="true" id="7dade040-1a4c-44c1-a0f0-40e22c3b0ba2" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="StaffController.java" pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/staffManagement/StaffController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="881">
-              <caret line="166" column="32" lean-forward="true" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
-              <folding />
+            <state relative-caret-position="21">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskController.java" pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/Login/LoginService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="336">
+              <caret line="25" selection-start-line="25" selection-end-line="25" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/projectManagement/ProjectController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1470">
+              <caret line="91" selection-start-line="91" selection-end-line="91" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/util/ExtendPro.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="42">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/projectManagement/TaskController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="613">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="105">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/projectManagement/TaskService.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Staff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="413">
-              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <element signature="e#1340#1341#0" expanded="true" />
-                <element signature="e#1403#1404#0" expanded="true" />
-                <element signature="e#1463#1464#0" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="987">
+              <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StaffMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/staffManagement/StaffMapper.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/ManageStaff.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-              <folding />
+            <state relative-caret-position="84">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskMapper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/projectManagement/TaskMapper.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/EUseApply.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-              <folding />
+            <state relative-caret-position="714">
+              <caret line="56" column="64" selection-start-line="56" selection-start-column="64" selection-end-line="56" selection-end-column="64" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StaffService.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/staffManagement/StaffService.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/ERepairApply.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="639">
-              <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-              <folding>
-                <element signature="e#1284#1285#0" expanded="true" />
-                <element signature="e#1349#1350#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="672">
+              <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TaskCollection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/util/TaskCollection.java">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Company.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding>
-                <element signature="e#244#245#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StaffMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/staffManagement/StaffMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-              <folding>
-                <marker date="1562309092332" expanded="true" signature="302:340" ph="SELECT * fro... staff" />
-                <marker date="1562309092332" expanded="true" signature="414:433" ph="SELECT * fro... staff" />
-                <marker date="1562309092332" expanded="true" signature="531:566" ph="SELECT * FRO... staff" />
-                <marker date="1562309092332" expanded="true" signature="667:754" ph="SELECT * FRO... staff" />
-                <marker date="1562309092332" expanded="true" signature="699:753" ph="SELECT staff... authentication" />
-                <marker date="1562309092332" expanded="true" signature="827:860" ph="delete from " />
-                <marker date="1562309092332" expanded="true" signature="938:1146" ph="INSERT INTO staff... " />
-                <marker date="1562309092332" expanded="true" signature="1226:1249" ph="SELECT LAST_... " />
-                <marker date="1562309092332" expanded="true" signature="1332:1373" ph="UPDATE staff... " />
-                <marker date="1562309092332" expanded="true" signature="1458:1518" ph="SELECT * FRO... staff" />
-                <marker date="1562309092332" expanded="true" signature="1601:1641" ph="SELECT * FRO... staff" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TaskMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/projectManagement/TaskMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-              <folding>
-                <marker date="1562310922001" expanded="true" signature="299:318" ph="SELECT * FRO... task" />
-                <marker date="1562310922001" expanded="true" signature="410:444" ph="SELECT * FRO... task" />
-                <marker date="1562310922001" expanded="true" signature="517:549" ph="DELETE FROM " />
-                <marker date="1562310922001" expanded="true" signature="606:704" ph="UPDATE task " />
-                <marker date="1562310922001" expanded="true" signature="787:828" ph="SELECT * FRO... task" />
-                <marker date="1562310922001" expanded="true" signature="914:965" ph="SELECT taskI... participate" />
-                <marker date="1562310922001" expanded="true" signature="1027:1089" ph="DELETE FROM " />
-                <marker date="1562310922001" expanded="true" signature="1148:1208" ph="INSERT INTO participate... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginMapper.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Login/LoginMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-              <folding>
-                <marker date="1562139567663" expanded="true" signature="288:314" ph="SELECT * fro... manage_staff" />
-                <marker date="1562139567663" expanded="true" signature="387:526" ph="INSERT into staff... " />
-                <marker date="1562139567663" expanded="true" signature="601:622" ph="SELECT * fro... account" />
-                <marker date="1562139567663" expanded="true" signature="699:785" ph="INSERT INTO account... " />
-                <marker date="1562139567663" expanded="true" signature="889:936" ph="SELECT passw... account" />
-                <marker date="1562139567663" expanded="true" signature="1037:1077" ph="SELECT name company" />
-              </folding>
+            <state relative-caret-position="42">
+              <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -328,11 +237,6 @@
       <filtered-out-file-type name="spring.factories" />
     </file-type-list>
   </component>
-  <component name="GradleLocalSettings">
-    <option name="externalProjectsViewState">
-      <projects_view />
-    </option>
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -390,12 +294,6 @@
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-    <sorting>DEFINITION_ORDER</sorting>
-  </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -403,34 +301,21 @@
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-287" />
-    <option name="y" value="62" />
-    <option name="width" value="1266" />
-    <option name="height" value="1020" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-10" />
+    <option name="y" value="-10" />
+    <option name="width" value="1940" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
-      <flattenPackages />
-      <showMembers />
-      <showModules />
-      <showLibraryContents />
-      <hideEmptyPackages />
-      <abbreviatePackageNames />
-      <autoscrollToSource />
-      <autoscrollFromSource />
-      <sortByType />
-      <manualOrder />
+    <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
-      <pane id="Scratches" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -461,299 +346,38 @@
               <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="config" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="clientManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="financeManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="materialManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="projectManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-              <item name="staffManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="financeManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="materialManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="projectManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="staffManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="materialManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="projectManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="staffManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="clientManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="Login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="materialManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="projectManagement" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="propertyManagement" type="b2602c69:ProjectViewProjectNode" />
-              <item name="propertyManagement" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-              <item name="staffManagement" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/新建文件夹/json-taglib-0.4.1.jar!/" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.3216912" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="SearchEverywhereHistoryKey" value="HashMap&#9;PSI&#9;JAVA://java.util.HashMap&#10;SimpleDateFormat&#9;PSI&#9;JAVA://java.text.SimpleDateFormat" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/新建文件夹/json-taglib-0.4.1.jar!/" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.3216912" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="E:\ylpm\backEndService\propertyManagement\src\main\webapp\WEB-INF\swagger" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\ylpm\backEndService\propertyManagement\src\main\webapp" />
       <recent name="E:\ylpm\backEndService\propertyManagement\src\main\webapp\WEB-INF" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\ylpm\backEndService\propertyManagement\src\main\webapp\WEB-INF\swagger" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -768,7 +392,35 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Tomcat Server.Unnamed">
+  <component name="RunManager">
+    <configuration default="true" type="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Unnamed" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 9.0.8" ALTERNATIVE_JRE_ENABLED="false">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/propertyManagement/" />
       <option name="UPDATING_POLICY" value="restart-server" />
@@ -782,12 +434,11 @@
       <server-settings>
         <option name="BASE_DIRECTORY_NAME" value="Unnamed_propertyManagement_6" />
       </server-settings>
-      <predefined_log_file id="Tomcat" enabled="true" />
-      <predefined_log_file id="Tomcat Catalina" enabled="true" />
-      <predefined_log_file id="Tomcat Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Host Manager" enabled="false" />
-      <predefined_log_file id="Tomcat Localhost Access" enabled="false" />
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
         <option name="DEBUG_PORT" value="54975" />
       </RunnerSettings>
@@ -851,96 +502,22 @@
           <option name="PROGRAM_PARAMETERS" value="" />
         </SHUTDOWN>
       </ConfigurationWrapper>
-      <method>
+      <method v="2">
+        <option name="Make" enabled="true" />
         <option name="BuildArtifacts" enabled="true">
           <artifact name="propertyManagement:war exploded" />
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <module />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="" />
-      <envs />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-    </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-    </configuration>
-  </component>
-  <component name="ShelveChangesManager" show_recycled="false">
-    <option name="remove_strategy" value="false" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -1018,77 +595,54 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="275050000" />
+    <option name="totallyTimeSpent" value="275051000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
-    <editor active="true" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36602053" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32839224" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.7468643" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25053647" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="JProfiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2707775" />
+      <window_info id="Structure" order="1" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Capture Tool" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3295325" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.7468643" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.36602053" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32839224" />
+      <window_info anchor="bottom" id="Java Enterprise" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32915717" />
+      <window_info anchor="bottom" id="Application Servers" order="12" visible="true" weight="0.3282123" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32839224" />
+      <window_info anchor="bottom" id="JProfiler" order="14" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="34" />
-    </breakpoint-manager>
-    <watches-manager />
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Contract.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="9" column="21" lean-forward="true" selection-start-line="9" selection-start-column="21" selection-end-line="9" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk/src.zip!/java/text/SimpleDateFormat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36114">
-          <caret line="1432" column="15" lean-forward="false" selection-start-line="1432" selection-start-column="11" selection-end-line="1432" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Java/jdk/src.zip!/java/text/SimpleDateFormat.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/config/SwaggerConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="18" column="13" lean-forward="false" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
+          <caret line="18" column="13" selection-start-line="18" selection-start-column="13" selection-end-line="18" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1096,7 +650,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Account.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1104,7 +658,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Consumables.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
           <folding>
             <element signature="e#267#268#0" expanded="false" />
             <element signature="e#300#301#0" expanded="false" />
@@ -1136,7 +690,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/CUseApply.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="416">
-          <caret line="16" column="24" lean-forward="false" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <caret line="16" column="24" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
           <folding>
             <element signature="e#397#398#0" expanded="false" />
             <element signature="e#430#431#0" expanded="false" />
@@ -1184,7 +738,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Equipment.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-167">
-          <caret line="8" column="24" lean-forward="false" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
+          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
           <folding>
             <element signature="e#216#217#0" expanded="false" />
             <element signature="e#249#250#0" expanded="false" />
@@ -1208,7 +762,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/EPurseApply.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
-          <caret line="8" column="12" lean-forward="false" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
+          <caret line="8" column="12" selection-start-line="8" selection-start-column="12" selection-end-line="8" selection-end-column="12" />
           <folding>
             <element signature="e#347#348#0" expanded="false" />
             <element signature="e#372#373#0" expanded="false" />
@@ -1253,7 +807,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/CPurseApply.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1285">
-          <caret line="13" column="22" lean-forward="false" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
+          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
           <folding>
             <element signature="e#349#350#0" expanded="false" />
             <element signature="e#374#375#0" expanded="false" />
@@ -1297,52 +851,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Login/AuthenticationMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="4" selection-end-column="77" />
-          <folding>
-            <marker date="1561888994389" expanded="true" signature="344:392" ph="SELECT * FRO... authentication" />
-            <marker date="1561888994389" expanded="true" signature="470:491" ph="SELECT * FRO... company" />
-            <marker date="1561888994389" expanded="true" signature="551:627" ph="INSERT into authentication... " />
-            <marker date="1561888994389" expanded="true" signature="690:781" ph="UPDATE authe... " />
-            <marker date="1561888994389" expanded="true" signature="889:939" ph="SELECT staff... authentication" />
-          </folding>
+        <state>
+          <caret selection-end-line="4" selection-end-column="77" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/clientManagement/ClientMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1092">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1550671564818" expanded="true" signature="305:325" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="423:516" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="592:666" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="742:818" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="894:968" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="1044:1121" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="1197:1254" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="1330:1385" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="1461:1518" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="1594:1652" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="1729:1789" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="1866:1924" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="2001:2039" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="2116:2157" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="2234:2273" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="2350:2391" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="2468:2488" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="2589:2625" ph="SELECT * FRO... client" />
-            <marker date="1550671564818" expanded="true" signature="2705:2746" ph="DELETE FROM " />
-            <marker date="1550671564818" expanded="true" signature="2821:2902" ph="INSERT INTO client... " />
-            <marker date="1550671564818" expanded="true" signature="2978:3132" ph="UPDATE clien... " />
-          </folding>
-        </state>
+        <state relative-caret-position="-1092" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/materialManagement/MaterialMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
             <element signature="imports" expanded="false" />
           </folding>
@@ -1352,7 +874,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/materialManagement/MaterialService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
             <element signature="e#611#612#0" expanded="false" />
@@ -1365,28 +887,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
           <caret line="4" column="36" lean-forward="true" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="36" />
-          <folding>
-            <marker date="1561982348328" expanded="true" signature="318:343" ph="SELECT * fro... comsumables" />
-            <marker date="1561982348328" expanded="true" signature="425:448" ph="SELECT * FRO... equipment" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2964">
-          <caret line="114" column="16" lean-forward="false" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
-          <folding />
+          <caret line="114" column="16" selection-start-line="114" selection-start-column="16" selection-end-line="114" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/springMVC.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/jdbc.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -1398,191 +910,57 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
-          <caret line="21" column="33" lean-forward="false" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
+          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/login/LoginMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
-          <caret line="15" column="36" lean-forward="false" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-          <folding />
+          <caret line="15" column="36" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Project.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/ManageStaff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/EUseApply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="56" column="64" lean-forward="false" selection-start-line="56" selection-start-column="64" selection-end-line="56" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/ERepairApply.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="910">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#406#407#0" expanded="false" />
-            <element signature="e#431#432#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Staff.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1118">
-          <caret line="71" column="0" lean-forward="false" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1671#1672#0" expanded="false" />
-            <element signature="e#1698#1699#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/util/ExtendPro.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="7" column="22" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Java/jdk/src.zip!/java/util/HashMap.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="26754">
-          <caret line="1088" column="9" lean-forward="false" selection-start-line="1088" selection-start-column="9" selection-end-line="1088" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Java/jdk/src.zip!/java/util/HashMap.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/projectManagement/ProjectMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="104">
-          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/Login/LoginService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="50" lean-forward="true" selection-start-line="22" selection-start-column="50" selection-end-line="22" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#899#900#0" expanded="false" />
-            <element signature="e#956#957#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/projectManagement/ProjectService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
-          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/projectManagement/ProjectMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-702">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1550671967530" expanded="true" signature="305:326" ph="SELECT * FRO... project" />
-            <marker date="1550671967530" expanded="true" signature="406:466" ph="SELECT * fro... task" />
-            <marker date="1550671967530" expanded="true" signature="570:672" ph="SELECT * FRO... project" />
-            <marker date="1550671967530" expanded="true" signature="605:671" ph="select proje... task" />
-            <marker date="1550671967530" expanded="true" signature="774:811" ph="SELECT * fro... project" />
-            <marker date="1550671967530" expanded="true" signature="915:960" ph="SELECT * fro... contract" />
-            <marker date="1550671967530" expanded="true" signature="1209:1298" ph="INSERT into project... " />
-            <marker date="1550671967530" expanded="true" signature="1348:1434" ph="INSERT into task... " />
-            <marker date="1550671967530" expanded="true" signature="1488:1697" ph="INSERT INTO contract... " />
-            <marker date="1550671967530" expanded="true" signature="1774:1806" ph="DELETE from " />
-            <marker date="1550671967530" expanded="true" signature="1887:1923" ph="DELETE from " />
-            <marker date="1550671967530" expanded="true" signature="2003:2038" ph="DELETE from " />
-            <marker date="1550671967530" expanded="true" signature="2115:2158" ph="DELETE FROM " />
-            <marker date="1550671967530" expanded="true" signature="2218:2380" ph="UPDATE proje... " />
-            <marker date="1550671967530" expanded="true" signature="2441:2639" ph="UPDATE contr... " />
-          </folding>
-        </state>
+        <state relative-caret-position="-702" />
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/FrameworkServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="843" column="0" lean-forward="false" selection-start-line="843" selection-start-column="0" selection-end-line="843" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="886" column="0" lean-forward="false" selection-start-line="886" selection-start-column="0" selection-end-line="886" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="84" column="0" lean-forward="false" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="166">
-          <caret line="705" column="0" lean-forward="false" selection-start-line="705" selection-start-column="0" selection-end-line="705" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="127" column="9" lean-forward="true" selection-start-line="127" selection-start-column="9" selection-end-line="127" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.3.RELEASE/spring-web-4.1.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="140" column="0" lean-forward="false" selection-start-line="140" selection-start-column="0" selection-end-line="140" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/projectManagement/ProjectController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4423">
-          <caret line="49" column="42" lean-forward="false" selection-start-line="49" selection-start-column="42" selection-end-line="49" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/FrameworkServlet.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/DispatcherServlet.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/AbstractHandlerMethodAdapter.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/RequestMappingHandlerAdapter.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.1.3.RELEASE/spring-webmvc-4.1.3.RELEASE-sources.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.java" />
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.1.3.RELEASE/spring-web-4.1.3.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/materialManagement/MaterialController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="624">
-          <caret line="35" column="27" lean-forward="false" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
+          <caret line="35" column="27" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1591,14 +969,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5431">
           <caret line="238" column="9" lean-forward="true" selection-start-line="238" selection-start-column="9" selection-end-line="238" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/financeManagement/FinanceController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1606,7 +983,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/clientManagement/ClientController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1051">
-          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
           <folding />
         </state>
       </provider>
@@ -1614,7 +991,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/util/TaskCollection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="9" column="27" lean-forward="false" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
+          <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
           <folding>
             <element signature="e#244#245#0" expanded="true" />
           </folding>
@@ -1624,43 +1001,28 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/staffManagement/StaffMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
-          <caret line="35" column="13" lean-forward="false" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
-          <folding>
-            <marker date="1562309092332" expanded="true" signature="302:340" ph="SELECT * fro... staff" />
-            <marker date="1562309092332" expanded="true" signature="414:433" ph="SELECT * fro... staff" />
-            <marker date="1562309092332" expanded="true" signature="531:566" ph="SELECT * FRO... staff" />
-            <marker date="1562309092332" expanded="true" signature="667:754" ph="SELECT * FRO... staff" />
-            <marker date="1562309092332" expanded="true" signature="699:753" ph="SELECT staff... authentication" />
-            <marker date="1562309092332" expanded="true" signature="827:860" ph="delete from " />
-            <marker date="1562309092332" expanded="true" signature="938:1146" ph="INSERT INTO staff... " />
-            <marker date="1562309092332" expanded="true" signature="1226:1249" ph="SELECT LAST_... " />
-            <marker date="1562309092332" expanded="true" signature="1332:1373" ph="UPDATE staff... " />
-            <marker date="1562309092332" expanded="true" signature="1458:1518" ph="SELECT * FRO... staff" />
-            <marker date="1562309092332" expanded="true" signature="1601:1641" ph="SELECT * FRO... staff" />
-          </folding>
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/staffManagement/StaffMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
-          <caret line="13" column="21" lean-forward="false" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
-          <folding />
+          <caret line="13" column="21" selection-start-line="13" selection-start-column="21" selection-end-line="13" selection-end-column="21" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/mapper/projectManagement/TaskMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="364">
-          <caret line="15" column="49" lean-forward="false" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
-          <folding />
+          <caret line="15" column="49" selection-start-line="15" selection-start-column="49" selection-end-line="15" selection-end-column="49" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/staffManagement/StaffService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="639">
-          <caret line="50" column="0" lean-forward="false" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+          <caret line="50" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="e#1284#1285#0" expanded="true" />
             <element signature="e#1349#1350#0" expanded="true" />
@@ -1671,7 +1033,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/projectManagement/TaskService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
-          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
           <folding>
             <element signature="e#1340#1341#0" expanded="true" />
             <element signature="e#1403#1404#0" expanded="true" />
@@ -1684,48 +1046,87 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/Login/LoginMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
-          <folding>
-            <marker date="1562139567663" expanded="true" signature="288:314" ph="SELECT * fro... manage_staff" />
-            <marker date="1562139567663" expanded="true" signature="387:526" ph="INSERT into staff... " />
-            <marker date="1562139567663" expanded="true" signature="601:622" ph="SELECT * fro... account" />
-            <marker date="1562139567663" expanded="true" signature="699:785" ph="INSERT INTO account... " />
-            <marker date="1562139567663" expanded="true" signature="889:936" ph="SELECT passw... account" />
-            <marker date="1562139567663" expanded="true" signature="1037:1077" ph="SELECT name company" />
-          </folding>
+          <caret line="21" column="16" selection-start-line="21" selection-start-column="16" selection-end-line="21" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/projectManagement/TaskMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
-          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
-          <folding>
-            <marker date="1562310922001" expanded="true" signature="299:318" ph="SELECT * FRO... task" />
-            <marker date="1562310922001" expanded="true" signature="410:444" ph="SELECT * FRO... task" />
-            <marker date="1562310922001" expanded="true" signature="517:549" ph="DELETE FROM " />
-            <marker date="1562310922001" expanded="true" signature="606:704" ph="UPDATE task " />
-            <marker date="1562310922001" expanded="true" signature="787:828" ph="SELECT * FRO... task" />
-            <marker date="1562310922001" expanded="true" signature="914:965" ph="SELECT taskI... participate" />
-            <marker date="1562310922001" expanded="true" signature="1027:1089" ph="DELETE FROM " />
-            <marker date="1562310922001" expanded="true" signature="1148:1208" ph="INSERT INTO participate... " />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/projectManagement/TaskController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="613">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-          <folding />
+          <caret line="27" column="20" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/staffManagement/StaffController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="881">
-          <caret line="166" column="32" lean-forward="true" selection-start-line="166" selection-start-column="32" selection-end-line="166" selection-end-column="32" />
-          <folding />
+        <state relative-caret-position="21">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/service/Login/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="25" selection-start-line="25" selection-end-line="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/projectManagement/ProjectController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1470">
+          <caret line="91" selection-start-line="91" selection-end-line="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/util/ExtendPro.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/controller/projectManagement/TaskController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Staff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="987">
+          <caret line="79" column="5" selection-start-line="79" selection-start-column="5" selection-end-line="79" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/ManageStaff.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="84">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/EUseApply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="56" column="64" selection-start-line="56" selection-start-column="64" selection-end-line="56" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/ERepairApply.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="52" column="5" selection-start-line="52" selection-start-column="5" selection-end-line="52" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/propertyManagement/pojo/Company.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
         </state>
       </provider>
     </entry>

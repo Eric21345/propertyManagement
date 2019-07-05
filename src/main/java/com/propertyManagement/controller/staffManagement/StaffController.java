@@ -1,5 +1,6 @@
 package com.propertyManagement.controller.staffManagement;
 
+import com.propertyManagement.pojo.Authentication;
 import com.propertyManagement.pojo.Project;
 import com.propertyManagement.pojo.Staff;
 import com.propertyManagement.pojo.Task;
@@ -75,6 +76,19 @@ public class StaffController {
         authenticationService.updateAuthentication(handler.getId(), new Date(), 1, authenticationId);
         Map map = new HashMap();
         map.put("status", 1);
+        return map;
+    }
+
+
+    //管理员显示新员工认证申请列表
+    @SuppressWarnings("unchecked")
+    @RequestMapping("handleNewStaffApply")
+    public Map listNewStaff(@RequestParam("staffId") int id){
+        Map map = new HashMap();
+        List<Authentication> newStaffList = authenticationService.getAuthenticationList();
+        List<Staff> newStaffInfo = staffService.getStaffInfoFromAuthentication();
+        map.put("status",1);
+        map.put("newStaffList",newStaffList);
         return map;
     }
 

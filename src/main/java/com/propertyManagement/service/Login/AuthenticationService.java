@@ -35,4 +35,6 @@ public class AuthenticationService {
         return authenticationMapper.getStaffIdByAuthenticationId(authenticationId);
     }
 
+    public List<Authentication> getAuthenticationList(){return authenticationMapper.getAuthenticationList();}
+
 }

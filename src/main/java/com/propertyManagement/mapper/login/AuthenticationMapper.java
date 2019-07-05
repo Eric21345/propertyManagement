@@ -12,4 +12,5 @@ public interface AuthenticationMapper {
     void addAuthentication(String openId, int staffId, int state);
     void updateAuthentication(int handlerId, Date handleDate, int state, int authenticationId);
     int getStaffIdByAuthenticationId(int staffId);
+    List<Authentication> getAuthenticationList();
 }

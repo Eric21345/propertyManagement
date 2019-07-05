@@ -7,7 +7,7 @@ import com.propertyManagement.service.Login.LoginService;
 import com.propertyManagement.service.staffManagement.StaffService;
 import com.propertyManagement.util.AesCbcUtil;
 import com.propertyManagement.util.HttpRequest;
-import com.sun.org.glassfish.external.amx.AMX;
+//import com.sun.org.glassfish.external.amx.AMX;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -50,9 +50,9 @@ public class LoginController {
         }
 
         //小程序的唯一标识
-        String wxAppId = "wxbbb4709fb682a3a2";
+        String wxAppId = "wx4f5af2f59f95babd";
         //小程序的app secret
-        String wxAppSecret = "12c22d53a9c8476f143f572a6eabc80e";
+        String wxAppSecret = "dfcffba5e3f5852cc0862cb64388a487";
         //授权
         String grantType = "authorization_code";
         //请求参数

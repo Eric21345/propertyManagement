@@ -9,7 +9,10 @@ import com.propertyManagement.service.projectManagement.ProjectService;
 import com.propertyManagement.util.ExtendPro;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import javafx.scene.control.ListCell;
+//<<<<<<< Updated upstream
+//=======
+////import javafx.scene.control.ListCell;
+//>>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -64,6 +67,18 @@ public class ProjectController {
             extendPros.add(extendPro);
         }
         map.put("MyProjects", extendPros);
+        return map;
+    }
+
+    //管理员根据自己的id查看自己的项目
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getMyProjects")
+    public Map getMyProjects(@RequestParam("staffId") int staffId){
+        Map map = new HashMap();
+        List<Project> myProjects = new ArrayList<>();
+        myProjects = projectService.getProjectsByStaffId(staffId);
+        map.put("myProjects",myProjects);
         return map;
     }
 

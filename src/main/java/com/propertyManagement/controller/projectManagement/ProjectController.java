@@ -9,7 +9,6 @@ import com.propertyManagement.service.projectManagement.ProjectService;
 import com.propertyManagement.util.ExtendPro;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import javafx.scene.control.ListCell;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -65,6 +64,21 @@ public class ProjectController {
         map.put("projectId", project.getId());
         return map;
     }
+
+
+    //管理员根据自己的id查看自己的项目
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getMyProjects")
+    public Map getMyProjects(@RequestParam("staffId") int staffId){
+        Map map = new HashMap();
+        List<Project> myProjects = new ArrayList<>();
+        myProjects = projectService.getProjectsByStaffId(staffId);
+        map.put("status",1);
+        map.put("myProjects",myProjects);
+        return map;
+    }
+
 
     //删除项目
     @RequestMapping("deleteProject")

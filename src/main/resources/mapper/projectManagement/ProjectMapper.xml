@@ -10,7 +10,7 @@
         SELECT * from task where staffId = #{0} and projectId = #{1};
     </select>
     <select id="getProjectsByStaffId" resultType="Project" parameterType="int">
-        SELECT * FROM project where id in (select projectId from task where staffId = #{0} group by projectId);
+        SELECT * FROM project where id in (select projectId from task where monitorId = #{0} group by projectId);
     </select>
     <select id="getProjectInfoById" resultType="Project" parameterType="int">
         SELECT * from project where id = #{0};

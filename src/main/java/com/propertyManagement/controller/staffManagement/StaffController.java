@@ -1,5 +1,6 @@
 package com.propertyManagement.controller.staffManagement;
 
+import com.propertyManagement.pojo.Authentication;
 import com.propertyManagement.pojo.Project;
 import com.propertyManagement.pojo.Staff;
 import com.propertyManagement.pojo.Task;
@@ -10,6 +11,7 @@ import com.propertyManagement.service.staffManagement.StaffService;
 import com.propertyManagement.util.TaskCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -38,7 +40,6 @@ public class StaffController {
         List<Staff> staffList = staffService.getStaffList();
         map.put("staffList",staffList);
         return map;
-
     }
 
     //依据员工id获得员工详情
@@ -78,6 +79,21 @@ public class StaffController {
         authenticationService.updateAuthentication(handler.getId(), new Date(), 1, authenticationId);
         Map map = new HashMap();
         map.put("status", 1);
+        return map;
+    }
+
+
+    //管理员显示新员工认证申请列表
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getNewStaffApplyList")
+    public Map getNewStaffApplyList(){
+        Map map = new HashMap();
+        List<Authentication> newStaffList = authenticationService.getAuthenticationList();
+        List<Staff> newStaffInfoList = staffService.getStaffInfoInAuthentication();
+        map.put("status",1);
+        map.put("newStaffList",newStaffList);
+        map.put("newStaffInfoList",newStaffInfoList);
         return map;
     }
 

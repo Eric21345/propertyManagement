@@ -17,4 +17,5 @@ public interface StaffMapper {
     List<Staff> getStaffListByCompanyId(int companyId);
     List<Staff> getStaffListByNameStr(String nameStr);
     void deleteTaskByStaffIdAndTaskId(int taskId);
+    List<Staff> getStaffInfoInAuthentication();
 }

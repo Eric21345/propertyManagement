@@ -18,4 +18,8 @@
     <select id="getStaffIdByAuthenticationId" parameterType="int" resultType="int">
         SELECT staffId FROM authentication where id = #{0};
     </select>
+
+    <select id="getAuthenticationList" resultType="Authentication">
+        SELECT * FROM authentication;
+    </select>
 </mapper>

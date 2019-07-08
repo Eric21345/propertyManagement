@@ -9,10 +9,6 @@ import com.propertyManagement.service.projectManagement.ProjectService;
 import com.propertyManagement.util.ExtendPro;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-//<<<<<<< Updated upstream
-//=======
-////import javafx.scene.control.ListCell;
-//>>>>>>> Stashed changes
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -37,6 +33,7 @@ public class ProjectController {
     //管理人员查询公司所有的项目
 
     @ApiOperation("获取所有项目")
+    @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("getAllProjects")
     public Map getAllProjects(){
@@ -78,26 +75,11 @@ public class ProjectController {
         Map map = new HashMap();
         List<Project> myProjects = new ArrayList<>();
         myProjects = projectService.getProjectsByStaffId(staffId);
+        map.put("status",1);
         map.put("myProjects",myProjects);
         return map;
     }
 
-    //较高层次的管理人员可对公司所有项目进行管理，对项目进行增、删、查，以及合同的增、删、查
-
-    //添加项目
-    @SuppressWarnings("unchecked")
-    @ResponseBody
-    @RequestMapping("addProject")
-    public Map addProject(@RequestParam("name") String name,
-                           @RequestParam("description") String description,
-                           @RequestParam("planNum") int planNum,
-                           @RequestParam("planMoney") BigInteger planMoney){
-        System.out.println(name + " " + description + " " + planNum + " " + planMoney);
-        projectService.addProject(name, description, planNum, planMoney);
-        Map map = new HashMap();
-        map.put("status", 1);
-        return map;
-    }
 
     //删除项目
     @RequestMapping("deleteProject")

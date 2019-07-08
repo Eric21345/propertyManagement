@@ -45,8 +45,8 @@ public class StaffService {
         return staffMapper.getStaffListByCompanyId(companyId);
     }
 
-    public List<Staff> getStaffListByNameStr(String nameStr){
-        return staffMapper.getStaffListByNameStr(nameStr);
-    }
+    public List<Staff> getStaffListByNameStr(String nameStr){ return staffMapper.getStaffListByNameStr(nameStr); }
+
+    public List<Staff> getStaffInfoInAuthentication(){return staffMapper.getStaffInfoInAuthentication();}
 
 }

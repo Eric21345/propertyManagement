@@ -34,4 +34,8 @@
     <select id="getStaffListByNameStr" resultType="Staff">
         SELECT * FROM staff where name LIKE #{0};
     </select>
+
+    <select id="getStaffInfoInAuthentication" resultType="Staff">
+        SELECT * FROM staff where id in (SELECT staffId from authentication);
+    </select>
 </mapper>

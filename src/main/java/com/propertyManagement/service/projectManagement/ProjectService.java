@@ -20,7 +20,7 @@ public class ProjectService {
     public List<Project> getProjects(){ return projectMapper.getProjects();}
     public List<Project> getProjectsByStaffId(int staffId){ return projectMapper.getProjectsByStaffId(staffId);}
     public List<Task> getTasksBySIdAndPId(int staffId, int projectId){ return projectMapper.getTasksBySIdAndPId(staffId, projectId) ;}
-    public void addProject(String name, String description, int planNum, BigInteger planMoney){ projectMapper.addProject(name, description, planNum, planMoney);}
+    public void addProject(Project project){ projectMapper.addProject(project);}
     public void addTask(String name, String description, int projectId, int staffId){ projectMapper.addTask(name, description, projectId, staffId);}
     public void deleteTaskById(int taskId){ projectMapper.deleteTaskById(taskId);}
     public void deleteContractById(int contractId){ projectMapper.deleteContractById(contractId);}

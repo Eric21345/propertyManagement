@@ -31,6 +31,7 @@ public class StaffController {
     private TaskService taskService;
 
     //获取员工列表
+    @SuppressWarnings("unchecked")
     @RequestMapping("getStaffList")
     @ResponseBody
     public Map getStaffList(){
@@ -54,6 +55,7 @@ public class StaffController {
     }
 
     //删除员工
+    @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("deleteStaff")
     public Map deleteStaff(@RequestParam("id") int id){
@@ -64,6 +66,7 @@ public class StaffController {
     }
 
     //管理人员处理员工认证申请
+    @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("handleAuthentication")
     public Map addAuthentication(@RequestParam("authenticationId") int authenticationId,
@@ -82,13 +85,15 @@ public class StaffController {
 
     //管理员显示新员工认证申请列表
     @SuppressWarnings("unchecked")
-    @RequestMapping("handleNewStaffApply")
-    public Map listNewStaff(@RequestParam("staffId") int id){
+    @ResponseBody
+    @RequestMapping("getNewStaffApplyList")
+    public Map getNewStaffApplyList(){
         Map map = new HashMap();
         List<Authentication> newStaffList = authenticationService.getAuthenticationList();
-        List<Staff> newStaffInfo = staffService.getStaffInfoFromAuthentication();
+        List<Staff> newStaffInfoList = staffService.getStaffInfoInAuthentication();
         map.put("status",1);
         map.put("newStaffList",newStaffList);
+        map.put("newStaffInfoList",newStaffInfoList);
         return map;
     }
 

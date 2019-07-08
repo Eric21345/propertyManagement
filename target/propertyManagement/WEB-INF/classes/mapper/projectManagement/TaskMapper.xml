@@ -13,7 +13,7 @@
         DELETE FROM task WHERE id = #{0};
     </delete>
     <update id="updateTaskInfo">
-        UPDATE task SET name = #{1}, description = #{2}, planNum = #{3}, currentNum = #{4} where id = #{0};
+        UPDATE task SET name = #{1}, description = #{2}, planNum = #{3} where id = #{0};
     </update>
     <select id="getTaskListByProjectId" resultType="Task">
         SELECT * FROM task WHERE projectId = #{0};
@@ -27,4 +27,28 @@
     <insert id="addStaffIntoTask">
         INSERT INTO participate(staffId, taskId) VALUES (#{0}, #{1});
     </insert>
+    <insert id="addTask">
+        INSERT into task(name, description, planNum, projectId) VALUES
+        <foreach collection="taskList" item="item" index="index" separator=",">
+            (
+            #{item.name},
+            #{item.description},
+            #{item.planNum},
+            #{0}
+            )
+        </foreach>
+    </insert>
+    <select id="getSimpleTaskListByProjectId" resultMap="simpleTaskList" parameterType="int">
+        SELECT task.id, task.description, task.name as taskName, staff.name as monitorName FROM task LEFT OUTER JOIN staff
+        on task.monitorId = staff.id WHERE task.projectId = #{0};
+    </select>
+    <resultMap id="simpleTaskList" type="SimpleTask">
+        <id property="id" column="id"></id>
+        <result property="description" column="description"></result>
+        <result property="taskName" column="taskName"></result>
+        <result property="monitorName" column="monitorName"></result>
+    </resultMap>
+    <select id="getMonitorByTaskId" resultType="Staff">
+        SELECT * FROM staff where id = (SELECT monitorId FROM task WHERE id = #{0});
+    </select>
 </mapper>

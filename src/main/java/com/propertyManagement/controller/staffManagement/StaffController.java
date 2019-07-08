@@ -29,6 +29,7 @@ public class StaffController {
     private TaskService taskService;
 
     //获取员工列表
+    @SuppressWarnings("unchecked")
     @RequestMapping("getStaffList")
     @ResponseBody
     public Map getStaffList(){
@@ -53,6 +54,7 @@ public class StaffController {
     }
 
     //删除员工
+    @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("deleteStaff")
     public Map deleteStaff(@RequestParam("id") int id){
@@ -63,6 +65,7 @@ public class StaffController {
     }
 
     //管理人员处理员工认证申请
+    @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("handleAuthentication")
     public Map addAuthentication(@RequestParam("authenticationId") int authenticationId,

@@ -166,56 +166,6 @@ public class LoginController {
         return map;
     }
 
-
-//    @SuppressWarnings("unchecked")
-//    @RequestMapping("register")
-//    @ResponseBody
-//    public Map register(@RequestParam(value = "name") String name,
-//                         @RequestParam(value = "sex") String sex,
-//                         @RequestParam(value = "idCard") String idCard,
-//                         @RequestParam(value = "birthDate") String birthDate,
-//                         @RequestParam(value = "workDate") String workDate,
-//                         @RequestParam(value = "openid") String openid){
-//        System.out.println(name + "," + sex + "," + idCard + "," + birthDate + "," + workDate + "," + openid);
-//        List<ManageStaff> manageStaffs = loginService.listManageStaff();
-//        Map map = new HashMap();
-//        boolean flag = false;
-//        for(ManageStaff manageStaff:manageStaffs){
-//            if(manageStaff.getName().equals(name)){
-//                flag = true;
-//            }
-//        }
-//        if(flag){
-//            Staff staff = new Staff();
-//            staff.setName(name);
-//            staff.setSex(sex);
-//            staff.setIdCard(idCard);
-//            staff.setOpenid(openid);
-//            //字符串转date
-//            staff.setBirthDate(Date.valueOf(birthDate));
-//            staff.setWorkDate(Date.valueOf(workDate));
-//            loginService.addStaff(staff);
-//            map.put("msg", "注册成功");
-//            map.put("status", 1);
-//        }
-//        else {
-//            map.put("msg", "您不是合法用户");
-//            map.put("status", 0);
-//        }
-//        return map;
-//    }
-
-    //获取验证码
-    @SuppressWarnings("uncheck")
-    @RequestMapping("getIdentifyingCode")
-    public Map getIdentifyingCode(@RequestParam(value = "phone") String phone){
-        Map map = new HashMap();
-
-
-
-        return map;
-    }
-
     //手机号注册
     @SuppressWarnings("unchecked")
     @ResponseBody

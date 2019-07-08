@@ -1,7 +1,10 @@
 package com.propertyManagement.service.projectManagement;
 
 import com.propertyManagement.mapper.projectManagement.TaskMapper;
+import com.propertyManagement.pojo.SimpleTask;
+import com.propertyManagement.pojo.Staff;
 import com.propertyManagement.pojo.Task;
+import com.propertyManagement.util.TaskParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,8 +27,8 @@ public class TaskService {
         taskMapper.deleteTask(id);
     }
 
-    public void updateTaskInfo(int taskId, String name, String description, int planNum, int currentNum){
-        taskMapper.updateTaskInfo(taskId, name, description, planNum, currentNum);
+    public void updateTaskInfo(int taskId, String name, String description, int planNum){
+        taskMapper.updateTaskInfo(taskId, name, description, planNum);
     }
 
     public void addTask(String name, String description, int planNum, int currentNum, int projectId){
@@ -47,4 +50,17 @@ public class TaskService {
     public void addStaffIntoTask(int staffId, int taskId){
         taskMapper.addStaffIntoTask(staffId, taskId);
     }
+
+    public void addTask(int projectId, TaskParam[] taskList){
+        taskMapper.addTask(projectId, taskList);
+    }
+
+    public List<SimpleTask> getSimpleTaskListByProjectId(int projectId){
+        return taskMapper.getSimpleTaskListByProjectId(projectId);
+    }
+
+    public Staff getMonitorByTaskId(int taskId){
+        return taskMapper.getMonitorByTaskId(taskId);
+    }
+
 }

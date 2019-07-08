@@ -7,58 +7,6 @@
     <select id="getClientList" resultType="Client">
         SELECT * FROM client;
     </select>
-    <select id="selectClient" resultType="Client" parameterType="String">
-        SELECT * FROM client WHERE name = #{0} and company = #{1} and phone = #{2} and address = #{3};
-    </select>
-    <select id="selectClient2" resultType="Client">
-        SELECT * FROM client WHERE name = #{0} and company = #{1} and phone = #{2};
-    </select>
-    <select id="selectClient3" resultType="Client">
-        SELECT * FROM client WHERE name = #{0} and company = #{1} and address = #{2};
-    </select>
-    <select id="selectClient4" resultType="Client">
-        SELECT * FROM client WHERE name = #{0} and phone = #{1} and address = #{2};
-    </select>
-    <select id="selectClient5" resultType="Client">
-        SELECT * FROM client WHERE company = #{0} and phone = #{1} and address = #{2};
-    </select>
-    <select id="selectClient6" resultType="Client">
-        SELECT * FROM client WHERE name = #{0} and company = #{1};
-    </select>
-    <select id="selectClient7" resultType="Client">
-        SELECT * FROM client WHERE name = #{0} and phone = #{1};
-    </select>
-    <select id="selectClient8" resultType="Client">
-        SELECT * FROM client WHERE name = #{0} and address = #{1};
-    </select>
-    <select id="selectClient9" resultType="Client">
-        SELECT * FROM client WHERE company = #{0} and phone = #{1};
-    </select>
-    <select id="selectClient10" resultType="Client">
-        SELECT * FROM client WHERE company = #{0} and address = #{1};
-    </select>
-    <select id="selectClient11" resultType="Client">
-        SELECT * FROM client WHERE phone = #{0} and address = #{1};
-    </select>
-    <select id="selectClient12" resultType="Client">
-        SELECT * FROM client WHERE name = #{0};
-    </select>
-    <select id="selectClient13" resultType="Client">
-        SELECT * FROM client WHERE company = #{0};
-    </select>
-    <select id="selectClient14" resultType="Client">
-        SELECT * FROM client WHERE phone = #{0};
-    </select>
-    <select id="selectClient15" resultType="Client">
-        SELECT * FROM client WHERE address = #{0};
-    </select>
-    <select id="selectClient16" resultType="Client">
-        SELECT * FROM client;
-    </select>
-    <select id="getClientInfoById"  resultType="Client" parameterType="int">
-        SELECT * FROM client WHERE id = #{0};
-    </select>
-
     <delete id="deleteByPhone" parameterType="String">
         DELETE FROM client WHERE phone = #{phone};
     </delete>

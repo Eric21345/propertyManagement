@@ -34,6 +34,7 @@ public class ProjectController {
     //管理人员查询公司所有的项目
 
     @ApiOperation("获取所有项目")
+    @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("getAllProjects")
     public Map getAllProjects(){
@@ -43,32 +44,6 @@ public class ProjectController {
         return map;
     }
 
-    //管理人员查询自己相关的项目以及负责的任务
-    @RequestMapping("getTasks")
-    public Map getTasks(@RequestParam("staffId") int staffId){
-        Map map = new HashMap();
-        List<ExtendPro> extendPros = new ArrayList<>();
-        List<Project> projects = projectService.getProjectsByStaffId(staffId);
-        for(Project project:projects){
-            ExtendPro extendPro = new ExtendPro();
-            List<Task> tasks = projectService.getTasksBySIdAndPId(staffId, project.getId());
-            extendPro.setTasks(tasks);
-            extendPro.setId(project.getId());
-            extendPro.setName(project.getName());
-            extendPro.setDescription(project.getDescription());
-            extendPro.setPlanNum(project.getPlanNum());
-            extendPro.setCurrentNum(project.getCurrentNum());
-            extendPro.setPlanMoney(project.getPlanMoney());
-            extendPro.setCurrentMoney(project.getCurrentMoney());
-            extendPro.setState(project.getState());
-            extendPros.add(extendPro);
-        }
-        map.put("MyProjects", extendPros);
-        return map;
-    }
-
-    //较高层次的管理人员可对公司所有项目进行管理，对项目进行增、删、查，以及合同的增、删、查
-
     //添加项目
     @SuppressWarnings("unchecked")
     @ResponseBody
@@ -76,11 +51,18 @@ public class ProjectController {
     public Map addProject(@RequestParam("name") String name,
                            @RequestParam("description") String description,
                            @RequestParam("planNum") int planNum,
-                           @RequestParam("planMoney") BigInteger planMoney){
-        System.out.println(name + " " + description + " " + planNum + " " + planMoney);
-        projectService.addProject(name, description, planNum, planMoney);
+                           @RequestParam("planMoney") BigInteger planMoney,
+                           @RequestParam("companyId") int companyId){
+        Project project = new Project();
+        project.setName(name);
+        project.setDescription(description);
+        project.setPlanNum(planNum);
+        project.setPlanMoney(planMoney);
+        project.setCompanyId(companyId);
+        projectService.addProject(project);
         Map map = new HashMap();
         map.put("status", 1);
+        map.put("projectId", project.getId());
         return map;
     }
 

@@ -12,7 +12,7 @@ public interface ProjectMapper {
         List<Project> getProjects();
         List<Project> getProjectsByStaffId(int staffId);
         List<Task> getTasksBySIdAndPId(int staffId, int projectId);
-        void addProject(String name, String description, int planNum, BigInteger planMoney);
+        void addProject(Project project);
         void addTask(String name, String description, int projectId, int staffId);
         void deleteTaskById(int taskId);
         void deleteContractById(int contractId);

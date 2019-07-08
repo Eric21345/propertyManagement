@@ -21,8 +21,11 @@
     <!--<select id="getClientInfo" resultType="Client" parameterType="int">-->
         <!--SELECT * FROM client where id = (SELECT clientId from contract where id = #{0});-->
     <!--</select>-->
-    <insert id="addProject">
-        INSERT into project(name, description, planNum, planMoney) VALUES(#{0}, #{1}, #{2}, #{3});
+    <insert id="addProject" parameterType="Project">
+        INSERT into project(name, description, planNum, planMoney, companyId) VALUES(#{name}, #{description}, #{planNum}, #{planMoney}, #{companyId});
+        <selectKey keyProperty="id" order="AFTER" resultType="int">
+            SELECT LAST_INSERT_ID();
+        </selectKey>
     </insert>
     <insert id="addTask">
         INSERT into task(name, description, projectId, staffId) VALUES(#{0}, #{1}, #{2}, #{3});

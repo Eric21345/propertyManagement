@@ -63,4 +63,8 @@ public class TaskService {
         return taskMapper.getMonitorByTaskId(taskId);
     }
 
+    public List<Staff> getStaffListByTaskId(int taskId){
+        return taskMapper.getStaffListByTaskId(taskId);
+    }
+
 }

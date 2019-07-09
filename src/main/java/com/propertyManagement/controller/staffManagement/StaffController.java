@@ -131,7 +131,7 @@ public class StaffController {
         Map<Integer, List<Integer>> nowTaskListMap = new HashMap();
         for(int i = 0; i < projectList.size(); i++){
             List<Task> taskInList = taskService.getTaskListByProjectId(projectList.get(i).getId());
-            if(taskInList.size() != 0) taskList.add(taskInList);
+            taskList.add(taskInList);
             for(int k = 0; k < taskInList.size(); k++){
                 List<Integer> list = new ArrayList<>();
                 list.add(i);list.add(k);

@@ -22,4 +22,5 @@ public interface TaskMapper {
     void addTask(int projectId, @Param("taskList")TaskParam[] taskList);
     List<SimpleTask> getSimpleTaskListByProjectId(int projectId);
     Staff getMonitorByTaskId(int taskId);
+    List<Staff> getStaffListByTaskId(int taskId);
 }

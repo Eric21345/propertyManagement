@@ -1,6 +1,7 @@
 package com.propertyManagement.controller.projectManagement;
 
 import com.propertyManagement.pojo.SimpleTask;
+import com.propertyManagement.pojo.Staff;
 import com.propertyManagement.pojo.Task;
 import com.propertyManagement.service.projectManagement.TaskService;
 import com.propertyManagement.util.ProjectAndTaskParam;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.w3c.dom.ls.LSInput;
 
 import java.util.HashMap;
 import java.util.List;
@@ -116,7 +118,21 @@ public class TaskController {
     @RequestMapping("getMonitorByTaskId")
     public Map getMonitorByTaskId(@RequestParam("taskId") int taskId){
         Map map = new HashMap();
+        Staff monitor = taskService.getMonitorByTaskId(taskId);
         map.put("status", 1);
+        map.put("monitor", monitor);
+        return map;
+    }
+
+    //获取岗位id对应的员工列表
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getStaffListByTaskId")
+    public Map getStaffListByTaskId(@RequestParam("taskId") int taskId){
+        Map map = new HashMap();
+        List<Staff> staffList = taskService.getStaffListByTaskId(taskId);
+        map.put("status", 1);
+        map.put("staffList", staffList);
         return map;
     }
 

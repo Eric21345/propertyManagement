@@ -50,9 +50,9 @@ public class LoginController {
         }
 
         //小程序的唯一标识
-        String wxAppId = "wx4f5af2f59f95babd";
+        String wxAppId = "wxbbb4709fb682a3a2";
         //小程序的app secret
-        String wxAppSecret = "dfcffba5e3f5852cc0862cb64388a487";
+        String wxAppSecret = "12c22d53a9c8476f143f572a6eabc80e";
         //授权
         String grantType = "authorization_code";
         //请求参数

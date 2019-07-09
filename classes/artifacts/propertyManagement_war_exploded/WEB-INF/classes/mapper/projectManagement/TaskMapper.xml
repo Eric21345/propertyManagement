@@ -51,4 +51,7 @@
     <select id="getMonitorByTaskId" resultType="Staff">
         SELECT * FROM staff where id = (SELECT monitorId FROM task WHERE id = #{0});
     </select>
+    <select id="getStaffListByTaskId" resultType="Staff">
+        SELECT * FROM staff WHERE id in (SELECT staffId FROM participate WHERE taskId = #{0});
+    </select>
 </mapper>

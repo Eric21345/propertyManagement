@@ -8,6 +8,7 @@ import com.propertyManagement.util.TaskParam;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Date;
 import java.util.List;
 
 @Service
@@ -19,16 +20,16 @@ public class TaskService {
         return taskMapper.getTaskList();
     }
 
-    public Task getTaskInfo(int id){
-        return taskMapper.getTaskInfo(id);
+    public Task getTaskInfoById(int id){
+        return taskMapper.getTaskInfoById(id);
     }
 
     public void deleteTask(int id){
         taskMapper.deleteTask(id);
     }
 
-    public void updateTaskInfo(int taskId, String name, String description, int planNum){
-        taskMapper.updateTaskInfo(taskId, name, description, planNum);
+    public void updateTaskInfo(int taskId, String name, String description, int planNum, Date startDate, Date endDate){
+        taskMapper.updateTaskInfo(taskId, name, description, planNum, startDate, endDate);
     }
 
     public void addTask(String name, String description, int planNum, int currentNum, int projectId){
@@ -51,8 +52,8 @@ public class TaskService {
         taskMapper.addStaffIntoTask(staffId, taskId);
     }
 
-    public void addTask(int projectId, TaskParam[] taskList){
-        taskMapper.addTask(projectId, taskList);
+    public void addTaskList(int projectId, TaskParam[] taskList){
+        taskMapper.addTaskList(projectId, taskList);
     }
 
     public List<SimpleTask> getSimpleTaskListByProjectId(int projectId){
@@ -67,4 +68,10 @@ public class TaskService {
         return taskMapper.getStaffListByTaskId(taskId);
     }
 
+    public List<Staff> getFieldStaffByCompanyId(int companyId){
+        return taskMapper.getFieldStaffByCompanyId(companyId);
+    }
+    public List<Staff> getFieldStaffListByCompanyIdAndTaskId(int companyId, int taskId){
+        return taskMapper.getFieldStaffListByCompanyIdAndTaskId(companyId, taskId);
+    }
 }

@@ -1,6 +1,7 @@
 package com.propertyManagement.service.staffManagement;
 
 import com.propertyManagement.mapper.staffManagement.StaffMapper;
+import com.propertyManagement.pojo.ParameterList;
 import com.propertyManagement.pojo.Staff;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,10 +16,6 @@ public class StaffService {
 
     public List<Staff> getMonitorList(){
         return staffMapper.getMonitorList();
-    }
-
-    public List<Staff> getStaffList(){
-        return staffMapper.getStaffList();
     }
 
     public Staff getStaffInfoById(int id){
@@ -41,12 +38,15 @@ public class StaffService {
         staffMapper.updateStaffTypeById(staffId);
     }
 
-    public List<Staff> getStaffListByCompanyId(int companyId){
-        return staffMapper.getStaffListByCompanyId(companyId);
+    public List<Staff> getStaffListByCompanyId(ParameterList parameterList){
+        return staffMapper.getStaffListByCompanyId(parameterList);
     }
 
     public List<Staff> getStaffListByNameStr(String nameStr){ return staffMapper.getStaffListByNameStr(nameStr); }
 
     public List<Staff> getStaffInfoInAuthentication(){return staffMapper.getStaffInfoInAuthentication();}
 
+    public void addStaff(Staff staff){
+        staffMapper.addStaff(staff);
+    }
 }

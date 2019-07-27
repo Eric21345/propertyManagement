@@ -1,10 +1,7 @@
 package com.propertyManagement.service.projectManagement;
 
 import com.propertyManagement.mapper.projectManagement.ProjectMapper;
-import com.propertyManagement.pojo.Client;
-import com.propertyManagement.pojo.Contract;
-import com.propertyManagement.pojo.Project;
-import com.propertyManagement.pojo.Task;
+import com.propertyManagement.pojo.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +14,6 @@ public class ProjectService {
     @Autowired
     private ProjectMapper projectMapper;
 
-    public List<Project> getProjects(){ return projectMapper.getProjects();}
     public List<Project> getProjectsByStaffId(int staffId){ return projectMapper.getProjectsByStaffId(staffId);}
     public List<Task> getTasksBySIdAndPId(int staffId, int projectId){ return projectMapper.getTasksBySIdAndPId(staffId, projectId) ;}
     public void addProject(Project project){ projectMapper.addProject(project);}
@@ -26,16 +22,42 @@ public class ProjectService {
     public void deleteContractById(int contractId){ projectMapper.deleteContractById(contractId);}
     public void deleteProjectById(int projectId){ projectMapper.deleteProjectById(projectId);}
     public Project getProjectInfoById(int projectId){ return projectMapper.getProjectInfoById(projectId);}
-    public void updateProjectInfo(int id, String name, String description, int planNum, int currentNum, BigInteger planMoney, BigInteger currentMoney, String state){
-        projectMapper.updateProjectInfo(id, name, description, planNum, currentNum, planMoney, currentMoney, state);
+    public void updateProjectInfo(int id, String name, String description, int planNum, BigInteger planMoney, int stateId){
+        projectMapper.updateProjectInfo(id, name, description, planNum, planMoney, stateId);
     };
-    public Contract getContractInfoById(int projectId){ return projectMapper.getContractInfoById(projectId);}
+    public Contract getContractInfoByProjectId(int projectId){ return projectMapper.getContractInfoByProjectId(projectId);}
     public void updateContractInfo(int id, String name, Date startDate, Date endDate, String content, BigInteger totalMoney, int frequency, int receive, BigInteger receiveMoney, String remark) {
         projectMapper.updateContractInfo(id, name, startDate, endDate, content, totalMoney, frequency, receive, receiveMoney, remark);
     }
     public void deleteContract(int projectId){ projectMapper.deleteContract(projectId);}
-//    public Client getClientInfo(int clientId){ return projectMapper.getClientInfo(clientId); }
-    public void addContract(int projectId, String name, Date startDate, Date endDate, String content, BigInteger totalMoney, int frequency, int receive, BigInteger receiveMoney, String remark, int clientId){
-        projectMapper.addContract(projectId, name, startDate, endDate, content, totalMoney, frequency, receive, receiveMoney, remark, clientId);
+    public void addContract(Contract contract){
+        projectMapper.addContract(contract);
+    }
+    public List<Project> getProjectListByCompanyId(int companyId){
+        return projectMapper.getProjectListByCompanyId(companyId);
+    }
+    public Company getCompanyByStaffId(int staffId){
+        return projectMapper.getCompanyByStaffId(staffId);
+    }
+    public String getImgPathByProjectId(int projectId){
+        return projectMapper.getImgPathByProjectId(projectId);
+    }
+    public void updateImgPathByProjectId(int projectId, String imgPath){
+        projectMapper.updateImgPathByProjectId(projectId, imgPath);
+    }
+    public List<Project> selectProjectByName(String name){
+        return projectMapper.selectProjectByName(name);
+    }
+    public Client getClientByContractId(int contractId){
+        return projectMapper.getClientByContractId(contractId);
+    }
+    public List<Project> getSimpleProjectListByCompanyId(int companyId){
+        return projectMapper.getSimpleProjectListByCompanyId(companyId);
+    }
+    public List<Client> getClientListByCompanyId(int companyId){
+        return projectMapper.getClientListByCompanyId(companyId);
+    }
+    public void addClient(Client client){
+        projectMapper.addClient(client);
     }
 }

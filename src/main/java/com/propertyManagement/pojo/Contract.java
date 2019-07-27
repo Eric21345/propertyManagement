@@ -1,5 +1,7 @@
 package com.propertyManagement.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import java.math.BigInteger;
 import java.sql.Date;
 
@@ -8,7 +10,6 @@ public class Contract {
     private String name;
     private Date startDate;
     private Date endDate;
-    private String workType;
     private String workContent;
     private BigInteger totalMoney;
     private int frequency;
@@ -37,6 +38,7 @@ public class Contract {
         this.name = name;
     }
 
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "Asia/Shanghai")
     public Date getStartDate() {
         return startDate;
     }
@@ -45,20 +47,13 @@ public class Contract {
         this.startDate = startDate;
     }
 
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "Asia/Shanghai")
     public Date getEndDate() {
         return endDate;
     }
 
     public void setEndDate(Date endDate) {
         this.endDate = endDate;
-    }
-
-    public String getWorkType() {
-        return workType;
-    }
-
-    public void setWorkType(String workType) {
-        this.workType = workType;
     }
 
     public String getWorkContent() {

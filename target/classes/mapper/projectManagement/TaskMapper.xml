@@ -6,20 +6,25 @@
     <select id="getTaskList" resultType="Task">
         SELECT *  FROM task;
     </select>
-    <select id="getTaskInfo" resultType="Task" parameterType="int">
-        SELECT * FROM task where id = #{0};
+    <select id="getTaskInfoById" resultType="Task" parameterType="int">
+        SELECT task_id as id, task_name as name, task_desc as description, task_planNum as planNum, task_startDate
+        as startDate, task_endDate as endDate, task_projectId as projectId, task_monitorId as monitorId, task_currentNum
+        as currentNum FROM bus_task WHERE task_id = #{0};
     </select>
     <delete id="deleteTask" parameterType="int">
         DELETE FROM task WHERE id = #{0};
     </delete>
     <update id="updateTaskInfo">
-        UPDATE task SET name = #{1}, description = #{2}, planNum = #{3} where id = #{0};
+        UPDATE bus_task SET task_name = #{1}, task_desc = #{2}, task_planNum = #{3}, task_startDate = #{4},
+        task_endDate = #{5} WHERE task_id = #{0};
     </update>
     <select id="getTaskListByProjectId" resultType="Task">
-        SELECT * FROM task WHERE projectId = #{0};
+        SELECT task_id as id, task_name as name, task_desc as description, task_planNum as planNum, task_startDate
+        as startDate, task_endDate as endDate, task_projectId as projectId, task_monitorId as monitorId, task_currentNum
+        as currentNum FROM bus_task WHERE task_projectId = #{0};
     </select>
     <select id="getTaskIdListByStaffId" resultType="Integer">
-        SELECT taskID FROM participate WHERE staffId = #{0};
+        SELECT par_taskId FROM bus_participate WHERE par_staffId = #{0};
     </select>
     <delete id="deleteStaffFromTask">
         DELETE FROM participate WHERE staffId = #{0} and taskId = #{1};
@@ -27,13 +32,15 @@
     <insert id="addStaffIntoTask">
         INSERT INTO participate(staffId, taskId) VALUES (#{0}, #{1});
     </insert>
-    <insert id="addTask">
-        INSERT into task(name, description, planNum, projectId) VALUES
+    <insert id="addTaskList">
+        INSERT into bus_task(task_name, task_desc, task_planNum, task_startDate, task_endDate, task_projectId) VALUES
         <foreach collection="taskList" item="item" index="index" separator=",">
             (
             #{item.name},
             #{item.description},
             #{item.planNum},
+            #{item.startDate},
+            #{item.endDate},
             #{0}
             )
         </foreach>
@@ -49,9 +56,20 @@
         <result property="monitorName" column="monitorName"></result>
     </resultMap>
     <select id="getMonitorByTaskId" resultType="Staff">
-        SELECT * FROM staff where id = (SELECT monitorId FROM task WHERE id = #{0});
+        SELECT staff_id as id, staff_name as name, staff_phone as phone, staff_sex as sex FROM bus_staff WHERE staff_id = (SELECT task_monitorId
+        FROM bus_task WHERE task_Id = #{0});
     </select>
     <select id="getStaffListByTaskId" resultType="Staff">
-        SELECT * FROM staff WHERE id in (SELECT staffId FROM participate WHERE taskId = #{0});
+        SELECT staff_id as id, staff_name as name, staff_phone as phone, staff_sex as sex FROM bus_staff, bus_task, bus_participate WHERE task_id
+        = par_taskId and staff_id = par_staffId and par_taskId = #{0} and staff_id != task_monitorId;
+    </select>
+    <select id="getFieldStaffByCompanyId" resultType="Staff">
+        SELECT staff_id as id, staff_name as name, pos_name as position, staff_sex as sex, staff_workDate as workDate, staff_phone as phone FROM
+        bus_staff, dic_position WHERE staff_positionId = pos_id and pos_id = 1 and staff_companyId = #{0};
+    </select>
+    <select id="getFieldStaffListByCompanyIdAndTaskId" resultType="Staff">
+        SELECT staff_id as id, staff_name as name, pos_name as position, staff_sex as sex, staff_workDate as workDate, staff_phone as phone FROM
+        bus_staff, dic_position WHERE staff_positionId = pos_id and staff_companyId = #{0} and staff_id not in (SELECT par_staffId FROM bus_participate
+        WHERE par_taskId = #{1});
     </select>
 </mapper>

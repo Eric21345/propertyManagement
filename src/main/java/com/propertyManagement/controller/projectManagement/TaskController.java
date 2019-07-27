@@ -11,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.w3c.dom.ls.LSInput;
 
+import java.sql.Date;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -22,12 +24,12 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    //获取岗位列表
+    //获取项目对应的岗位列表
     @SuppressWarnings("unchecked")
     @ResponseBody
-    @RequestMapping("getTaskList")
-    public Map getTaskList(){
-        List<Task> taskList = taskService.getTaskList();
+    @RequestMapping("getTaskListByProjectId")
+    public Map getTaskListByProjectId(@RequestParam("projectId") int projectId){
+        List<Task> taskList = taskService.getTaskListByProjectId(projectId);
         Map map = new HashMap();
         map.put("status", 1);
         map.put("taskList", taskList);
@@ -37,9 +39,9 @@ public class TaskController {
     //获取岗位详情
     @SuppressWarnings("unchecked")
     @ResponseBody
-    @RequestMapping("getTaskInfo")
-    public Map getTaskInfo(@RequestParam("id") int id){
-        Task task = taskService.getTaskInfo(id);
+    @RequestMapping("getTaskInfoById")
+    public Map getTaskInfoById(@RequestParam("id") int id){
+        Task task = taskService.getTaskInfoById(id);
         Map map = new HashMap();
         map.put("status", 1);
         map.put("taskInfo", task);
@@ -53,10 +55,38 @@ public class TaskController {
     public Map updateTaskInfo(@RequestParam("id") int id,
                               @RequestParam("name") String name,
                               @RequestParam("description") String description,
-                              @RequestParam("planNum") int planNum){
-        taskService.updateTaskInfo(id, name, description, planNum);
+                              @RequestParam("planNum") int planNum,
+                              @RequestParam("startDate") String startDate,
+                              @RequestParam("endDate") String endDate) throws ParseException{
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        taskService.updateTaskInfo(id, name, description, planNum, new Date(sdf.parse(startDate).getTime()),
+                new Date(sdf.parse(endDate).getTime()));
         Map map = new HashMap();
         map.put("status", 1);
+        return map;
+    }
+
+    //获取公司所有的外勤员工列表
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getFieldStaffByCompanyId")
+    public Map getFieldStaffByCompanyId(@RequestParam("companyId") int companyId){
+        List<Staff> fieldStaffList = taskService.getFieldStaffByCompanyId(companyId);
+        Map map = new HashMap();
+        map.put("status", 1);
+        map.put("fieldStaffList", fieldStaffList);
+        return map;
+    }
+
+    //依据岗位id获取班长
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getMonitorByTaskId")
+    public Map getMonitorByTaskId(@RequestParam("taskId") int taskId){
+        Map map = new HashMap();
+        Staff monitor = taskService.getMonitorByTaskId(taskId);
+        map.put("status", 1);
+        map.put("monitor", monitor);
         return map;
     }
 
@@ -89,12 +119,12 @@ public class TaskController {
         return map;
     }
 
-    //给项目添加任务列表
+    //添加项目时，给项目添加岗位列表
     @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("addTaskList")
     public Map addTaskList(@RequestBody ProjectAndTaskParam projectAndTaskParam){
-        taskService.addTask(projectAndTaskParam.getProjectId(), projectAndTaskParam.getTaskList());
+        taskService.addTaskList(projectAndTaskParam.getProjectId(), projectAndTaskParam.getTaskList());
         Map map = new HashMap();
         map.put("status", 1);
         return map;
@@ -112,19 +142,7 @@ public class TaskController {
         return map;
     }
 
-    //依据岗位id获取班长
-    @SuppressWarnings("unchecked")
-    @ResponseBody
-    @RequestMapping("getMonitorByTaskId")
-    public Map getMonitorByTaskId(@RequestParam("taskId") int taskId){
-        Map map = new HashMap();
-        Staff monitor = taskService.getMonitorByTaskId(taskId);
-        map.put("status", 1);
-        map.put("monitor", monitor);
-        return map;
-    }
-
-    //获取岗位id对应的员工列表
+    //获取岗位id对应的员工列表(不包括班长)
     @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("getStaffListByTaskId")
@@ -136,4 +154,17 @@ public class TaskController {
         return map;
     }
 
+
+    //获取公司与某个岗位不相关的所有的外勤员工
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getFieldStaffListByCompanyIdAndTaskId")
+    public Map getFieldStaffListByCompanyIdAndTaskId(@RequestParam("companyId") int companyId,
+                                                     @RequestParam("taskId") int taskId){
+        List<Staff> fieldStaffList = taskService.getFieldStaffListByCompanyIdAndTaskId(companyId, taskId);
+        Map map = new HashMap();
+        map.put("status", 1);
+        map.put("fieldStaffList", fieldStaffList);
+        return map;
+    }
 }

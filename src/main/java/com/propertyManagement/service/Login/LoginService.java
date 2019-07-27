@@ -22,4 +22,7 @@ public class LoginService {
     public String getCompanyNameById(int id){
         return loginMapper.getCompanyNameById(id);
     }
+    public Account checkAccount(String phone, String password){
+        return loginMapper.checkAccount(phone, password);
+    }
 }

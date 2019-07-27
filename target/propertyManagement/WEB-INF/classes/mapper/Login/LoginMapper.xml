@@ -21,4 +21,8 @@
     <select id="getCompanyNameById" parameterType="int" resultType="String">
         SELECT name FROM company where id = #{0};
     </select>
+    <select id="checkAccount" resultType="Account">
+        SELECT acc_id AS id, acc_userName AS phone, acc_password AS password, acc_openId AS openId, acc_staffId
+        AS staffId FROM bus_account WHERE acc_userName = #{0} AND acc_password = #{1};
+    </select>
 </mapper>

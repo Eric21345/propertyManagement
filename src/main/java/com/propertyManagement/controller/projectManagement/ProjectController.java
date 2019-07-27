@@ -1,21 +1,22 @@
 package com.propertyManagement.controller.projectManagement;
 
 import com.propertyManagement.pojo.Client;
+import com.propertyManagement.pojo.Company;
 import com.propertyManagement.pojo.Contract;
 import com.propertyManagement.pojo.Project;
-import com.propertyManagement.pojo.Task;
-import com.propertyManagement.service.clientManagement.ClientService;
 import com.propertyManagement.service.projectManagement.ProjectService;
-import com.propertyManagement.util.ExtendPro;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.File;
+import java.io.IOException;
 import java.math.BigInteger;
+import java.sql.Date;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
@@ -25,39 +26,45 @@ import java.util.*;
 public class ProjectController {
     @Autowired
     private ProjectService projectService;
-    @Autowired
-    private ClientService clientService;
-
-
-    //较低层次的管理人员
-    //管理人员查询公司所有的项目
-
-    @ApiOperation("获取所有项目")
-    @SuppressWarnings("unchecked")
-    @ResponseBody
-    @RequestMapping("getAllProjects")
-    public Map getAllProjects(){
-        Map map = new HashMap();
-        List<Project> projects = projectService.getProjects();
-        map.put("projects", projects);
-        return map;
-    }
 
     //添加项目
     @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("addProject")
     public Map addProject(@RequestParam("name") String name,
-                           @RequestParam("description") String description,
-                           @RequestParam("planNum") int planNum,
-                           @RequestParam("planMoney") BigInteger planMoney,
-                           @RequestParam("companyId") int companyId){
+                          @RequestParam("description") String description,
+                          @RequestParam("planNum") int planNum,
+                          @RequestParam("planMoney") BigInteger planMoney,
+                          @RequestParam("companyId") int companyId,
+                          @RequestParam(value = "projectImg", required = false) MultipartFile multipartFile) throws IOException{
         Project project = new Project();
         project.setName(name);
         project.setDescription(description);
         project.setPlanNum(planNum);
         project.setPlanMoney(planMoney);
         project.setCompanyId(companyId);
+        String imgPath = null;
+        //本地使用的路径
+        //String localPath = "E:\\images\\";
+        //服务器上使用的路径
+        String localPath = "C:\\App\\pmApp\\";
+        String filename = null;
+        if(!multipartFile.isEmpty()){
+            //uuid作为文件名称
+            String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+            //文件类型
+            String contentType = multipartFile.getContentType();
+            //获得文件后缀名
+            String suffixName= contentType.substring(contentType.indexOf("/")+1);
+            //得到 文件名
+            filename = uuid+"."+suffixName;
+            System.out.println(filename);
+            //保存文件
+            multipartFile.transferTo(new File(localPath + filename));
+            imgPath = "/images/" + filename;
+        }
+        else imgPath = "/images/default.jpg";
+        project.setImgPath(imgPath);
         projectService.addProject(project);
         Map map = new HashMap();
         map.put("status", 1);
@@ -91,25 +98,18 @@ public class ProjectController {
     @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("selectProjectByName")
-    public Map selectProject(@RequestParam(value = "name") String projectName){
-        List<Project> projects = projectService.getProjects();
-        List<Project> projects2 = new ArrayList<>();
-        for (Project project:projects){
-            if(project.getName().contains(projectName)){
-                projects2.add(project);
-            }
+    public Map selectProject(@RequestParam("name") String projectName,
+                             @RequestParam("companyId") int comapnyId){
+        List<Project> projects;
+        if(projectName.equals("")){
+            projects = projectService.getProjectListByCompanyId(comapnyId);
         }
-        for(Project project:projects2){
-            System.out.println(project.getName());
+        else {
+            projects = projectService.selectProjectByName(projectName);
         }
         Map map = new HashMap();
         map.put("status", 1);
-        if (!projectName.equals("")){
-            map.put("projects", projects2);
-        }
-        else {
-            map.put("projects", projects);
-        }
+        map.put("projects",projects);
         return map;
     }
 
@@ -133,40 +133,65 @@ public class ProjectController {
                                  @RequestParam("name") String name,
                                  @RequestParam("description") String description,
                                  @RequestParam("planNum") int planNum,
-                                 @RequestParam("currentNum") int currentNum,
                                  @RequestParam("planMoney") BigInteger planMoney,
-                                 @RequestParam("currentMoney") BigInteger currentMoney,
                                  @RequestParam("index") int index){
-        String state = "未开始";
-        if(index == 1){
-            state = "进行中";
-        }
-        else if(index == 2){
-            state = "已完成";
-        }
-        else if(index == 3){
-            state = "已中断";
-        }
-        projectService.updateProjectInfo(id, name, description, planNum, currentNum, planMoney, currentMoney, state);
+        projectService.updateProjectInfo(id, name, description, planNum, planMoney, index + 1);
         Map map = new HashMap();
         map.put("status", 1);
         return map;
     }
 
-    //依据项目id获取合同信息
+    //更新项目图片
     @SuppressWarnings("unchecked")
     @ResponseBody
-    @RequestMapping("getContractInfoById")
-    public Map getContractInfoById(@RequestParam("id") int id){
+    @RequestMapping("updateProjectImg")
+    public Map updateProjectImg(@RequestParam("projectId") int projectId,
+                                @RequestParam("projectImg") MultipartFile multipartFile) throws IOException{
+        String filename = null;
+        String imgPath = null;
+        if(!multipartFile.isEmpty()){
+            //先获取项目之前的图片路径
+            String imgPathBefore = projectService.getImgPathByProjectId(projectId);
+            //本地使用的路径
+            //String localPath = "E:\\images\\";
+            //服务器上使用的路径
+            String localPath = "C:\\App\\pmApp\\";
+            String fileNameBefore = imgPathBefore.substring(imgPathBefore.lastIndexOf("/") + 1);
+            //删除原图片
+            File file = new File(localPath + fileNameBefore);
+            if(file.exists()) file.delete();
+            //上传新图片，并在数据库中添加图片访问路径
+            String uuid = UUID.randomUUID().toString().replaceAll("-", "");
+            String contentType = multipartFile.getContentType();
+            String suffixName= contentType.substring(contentType.indexOf("/")+1);
+            //得到 文件名
+            filename = uuid+"."+suffixName;
+            System.out.println(filename);
+            multipartFile.transferTo(new File(localPath + filename));
+        }
+        imgPath = "/images/" + filename;
+        projectService.updateImgPathByProjectId(projectId, imgPath);
         Map map = new HashMap();
-        Contract contract = projectService.getContractInfoById(id);
+        map.put("status", 1);
+        return map;
+    }
+
+    //依据项目id获取合同以及客户信息
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("getContractAndClientByProjectId")
+    public Map getContractAndClientByProjectId(@RequestParam("projectId") int projectId){
+        Map map = new HashMap();
+        Contract contract = projectService.getContractInfoByProjectId(projectId);
         if(contract != null){
-            map.put("status", 1);
+            Client client = projectService.getClientByContractId(contract.getId());
             map.put("contract", contract);
+            map.put("client", client);
         }
         else {
-            map.put("status", 0);
+            map.put("contract", null);
         }
+        map.put("status", 1);
         return map;
     }
 
@@ -209,34 +234,89 @@ public class ProjectController {
     @SuppressWarnings("unchecked")
     @ResponseBody
     @RequestMapping("addContract")
-    public Map addContract(@RequestParam("projectId") int projectId,
-                           @RequestParam("name") String name,
+    public Map addContract(@RequestParam("name") String name,
                            @RequestParam("startDate") String startDate,
                            @RequestParam("endDate") String endDate,
-                           @RequestParam("content") String content,
+                           @RequestParam("workContent") String workContent,
                            @RequestParam("totalMoney") BigInteger totalMoney,
                            @RequestParam("frequency") int frequency,
-                           @RequestParam("receive") int receive,
-                           @RequestParam("receiveMoney") BigInteger receiveMoney,
                            @RequestParam("remark") String remark,
-                           @RequestParam("clientName") String clientName,
-                           @RequestParam("Company") String company,
-                           @RequestParam("phone") String phone,
-                           @RequestParam("address") String address) throws ParseException{
-        //判断数据库中客户是否存在
-        Client client = clientService.selectClient(clientName, company, phone, address);
-        if(client == null){
-            clientService.addClient(clientName, company, phone, address);
-        }
-        //获取客户id
-        int id = clientService.selectClient(clientName, company, phone, address).getId();
-        //字符串转日期
+                           @RequestParam("clientId") int clientId,
+                           @RequestParam("projectId") int projectId,
+                           @RequestParam("companyId") int companyId) throws ParseException{
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-        projectService.addContract(projectId, name, sdf.parse(startDate), sdf.parse(endDate), content, totalMoney, frequency, receive, receiveMoney, remark, id);
+        Contract contract = new Contract();
+        contract.setName(name);
+        contract.setStartDate(new Date(sdf.parse(startDate).getTime()));
+        contract.setEndDate(new Date(sdf.parse(endDate).getTime()));
+        contract.setWorkContent(workContent);
+        contract.setTotalMoney(totalMoney);
+        contract.setFrequency(frequency);
+        contract.setRemark(remark);
+        contract.setClientId(clientId);
+        contract.setProjectId(projectId);
+        contract.setCompanyId(companyId);
+        projectService.addContract(contract);
         Map map = new HashMap();
         map.put("status", 1);
         return map;
     }
 
+    //获取公司对应所有项目(这里开始使用的是新表)
+    @SuppressWarnings("unchecked")
+    @RequestMapping("getProjectListByCompanyId")
+    @ResponseBody
+    public Map getProjectListByCompanyId(@RequestParam("companyId") int companyId){
+        Map map = new HashMap();
+        List<Project> projectList = projectService.getProjectListByCompanyId(companyId);
+        map.put("status", 1);
+        map.put("projectList", projectList);
+        return map;
+    }
+
+    //员工id获取对应公司
+    @SuppressWarnings("unchecked")
+    @RequestMapping("getCompanyByStaffId")
+    @ResponseBody
+    public Map getCompanyByStaffId(@RequestParam("staffId") int staffId){
+        Map map = new HashMap();
+        Company company = projectService.getCompanyByStaffId(staffId);
+        map.put("status", 1);
+        map.put("company", company);
+        return map;
+    }
+
+    //获取公司客户列表
+    @SuppressWarnings("unchecked")
+    @RequestMapping("getClientListByCompanyId")
+    @ResponseBody
+    public Map getClientListByCompanyId(@RequestParam("companyId") int companyId){
+        List<Client> clientList = projectService.getClientListByCompanyId(companyId);
+        Map map = new HashMap();
+        map.put("status", 1);
+        map.put("clientList", clientList);
+        return map;
+    }
+
+    //公司添加客户
+    @SuppressWarnings("unchecked")
+    @RequestMapping("addClient")
+    @ResponseBody
+    public Map addClient(@RequestParam("companyId") int companyId,
+                         @RequestParam("name") String name,
+                         @RequestParam("phone") String phone,
+                         @RequestParam("address") String address,
+                         @RequestParam("company") String company){
+        Client client = new Client();
+        client.setName(name);
+        client.setPhone(phone);
+        client.setAddress(address);
+        client.setCompany(company);
+        client.setCompanyId(companyId);
+        projectService.addClient(client);
+        Map map = new HashMap();
+        map.put("status", 1);
+        return map;
+    }
 
 }

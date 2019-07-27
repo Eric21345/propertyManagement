@@ -6,6 +6,7 @@ public class Company {
     private String address;
     private String phone;
     private int bossId;
+    private String email;
 
     public int getId() {
         return id;
@@ -23,8 +24,17 @@ public class Company {
         this.name = name;
     }
 
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getAddress() {
         return address;
+
     }
 
     public void setAddress(String address) {

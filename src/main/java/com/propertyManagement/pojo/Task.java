@@ -1,5 +1,9 @@
 package com.propertyManagement.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import java.sql.Date;
+
 public class Task {
     private int id;
     private String name;
@@ -8,6 +12,8 @@ public class Task {
     private int monitorId;
     private int currentNum;
     private int planNum;
+    private Date startDate;
+    private Date endDate;
 
 
     public int getId() {
@@ -64,5 +70,23 @@ public class Task {
 
     public void setPlanNum(int planNum) {
         this.planNum = planNum;
+    }
+
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "Asia/Shanghai")
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    @JsonFormat(pattern="yyyy-MM-dd",timezone = "Asia/Shanghai")
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
     }
 }

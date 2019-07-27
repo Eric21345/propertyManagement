@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="war" build-on-make="true" name="ylpm">
-    <output-path>$PROJECT_DIR$/../ylpm</output-path>
-    <root id="archive" name="ylpm.war">
-      <element id="artifact" artifact-name="propertyManagement:war exploded" />
-      <element id="dir-copy" path="$PROJECT_DIR$/src/main/webapp" />
-    </root>
-  </artifact>
-</component>

@@ -12,9 +12,18 @@ public class Project {
     private BigInteger currentMoney;
     private String state;
     private int companyId;
+    private String imgPath;
 
     public int getCompanyId() {
         return companyId;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 
     public void setCompanyId(int companyId) {

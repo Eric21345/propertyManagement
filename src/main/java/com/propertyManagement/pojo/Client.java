@@ -6,6 +6,7 @@ public class Client {
     private String address;
     private String name;
     private String phone;
+    private int companyId;
 
     public int getId() {
         return id;
@@ -47,4 +48,12 @@ public class Client {
         this.phone = phone;
     }
 
+
+    public int getCompanyId() {
+        return companyId;
+    }
+
+    public void setCompanyId(int companyId) {
+        this.companyId = companyId;
+    }
 }

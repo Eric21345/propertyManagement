@@ -3,9 +3,6 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.propertyManagement.mapper.projectManagement.ProjectMapper">
-    <select id="getProjects" resultType="Project">
-        SELECT * FROM project;
-    </select>
     <select id="getTasksBySIdAndPId" resultType="Task">
         SELECT * from task where staffId = #{0} and projectId = #{1};
     </select>
@@ -13,16 +10,17 @@
         SELECT * FROM project where id in (select projectId from task where monitorId = #{0} group by projectId);
     </select>
     <select id="getProjectInfoById" resultType="Project" parameterType="int">
-        SELECT * from project where id = #{0};
+        SELECT pro_id as id, pro_name as name, pro_desc as description, pro_planNum as planNum, pro_currentNum as currentNum,
+        pro_planMoney as planMoney, pro_currentMoney as currentMoney, pro_companyId as companyId, pro_imgPath as imgPath, ps_name as state from bus_project, dic_proState
+        WHERE ps_id = pro_stateId AND pro_id = #{0};
     </select>
-    <select id="getContractInfoById" resultType="Contract" parameterType="int">
-        SELECT * from contract where projectId = #{0};
+    <select id="getContractInfoByProjectId" resultType="Contract" parameterType="int">
+        SELECT cont_id as id, cont_name as name, cont_startDate as startDate, cont_endDate as endDate, cont_workContent as workContent, cont_totalMoney as totalMoney,
+        cont_frequency as frequency, cont_remark as remark, cont_receive as receive, cont_receiveMoney as receiveMoney, cont_lastReceive as lastReceive, cont_clientId as clientId,
+        cont_companyId as companyId, cont_projectId as projectId FROM bus_contract WHERE cont_projectId = #{0};
     </select>
-    <!--<select id="getClientInfo" resultType="Client" parameterType="int">-->
-        <!--SELECT * FROM client where id = (SELECT clientId from contract where id = #{0});-->
-    <!--</select>-->
     <insert id="addProject" parameterType="Project">
-        INSERT into project(name, description, planNum, planMoney, companyId) VALUES(#{name}, #{description}, #{planNum}, #{planMoney}, #{companyId});
+        INSERT into bus_project(pro_name, pro_desc, pro_planNum, pro_planMoney, pro_stateId, pro_companyId, pro_imgPath) VALUES(#{name}, #{description}, #{planNum}, #{planMoney}, 1, #{companyId}, #{imgPath});
         <selectKey keyProperty="id" order="AFTER" resultType="int">
             SELECT LAST_INSERT_ID();
         </selectKey>
@@ -30,8 +28,9 @@
     <insert id="addTask">
         INSERT into task(name, description, projectId, staffId) VALUES(#{0}, #{1}, #{2}, #{3});
     </insert>
-    <insert id="addContract">
-        INSERT INTO contract(projectId, name, startDate, endDate, workContent, totalMoney, frequency, receive, receiveMoney, remark, clientId) VALUES (#{0}, #{1}, #{2}, #{3}, #{4}, #{5}, #{6}, #{7}, #{8}, #{9}, #{10});
+    <insert id="addContract" parameterType="Contract">
+        INSERT INTO bus_contract(cont_name, cont_startDate, cont_endDate, cont_workContent, cont_totalMoney, cont_frequency, cont_remark, cont_clientId, cont_projectId, cont_companyId) VALUES
+        (#{name}, #{startDate}, #{endDate}, #{workContent}, #{totalMoney}, #{frequency}, #{remark}, #{clientId}, #{projectId}, #{companyId});
     </insert>
     <delete id="deleteTaskById" parameterType="int">
         DELETE from task WHERE id = #{0};
@@ -46,11 +45,46 @@
         DELETE FROM contract WHERE projectId = #{0};
     </delete>
     <update id="updateProjectInfo">
-        UPDATE project SET name = #{1}, description = #{2}, planNum = #{3}, currentNum = #{4}, planMoney = #{5}, currentMoney = #{6}, state = #{7}
-        WHERE id = #{0};
+        UPDATE bus_project SET pro_name = #{1}, pro_desc = #{2}, pro_planNum = #{3}, pro_planMoney = #{4}, pro_stateId = #{5}
+        WHERE pro_id = #{0};
     </update>
     <update id="updateContractInfo">
-        UPDATE contract SET name = #{1}, startDate = #{2}, endDate = #{3}, workContent = #{4}, totalMoney = #{5}, frequency = #{6}, receive = #{7}, receiveMoney = #{8}, remark = #{9}
-        WHERE id = #{0};
+        UPDATE bus_contract SET cont_name = #{1}, cont_startDate = #{2}, cont_endDate = #{3}, cont_workContent = #{4}, cont_totalMoney = #{5}, cont_frequency = #{6}, cont_receive = #{7}, cont_receiveMoney = #{8}, cont_remark = #{9}
+        WHERE cont_id = #{0};
     </update>
+    <select id="getProjectListByCompanyId" resultType="Project">
+        SELECT pro_id as id, pro_name as name, pro_desc as description, pro_planNum as planNum,
+        pro_currentNum as currentNum, pro_planMoney as planMoney, pro_currentMoney as currentMoney,
+        ps_name as state, pro_companyId as companyId, pro_imgPath as imgPath FROM bus_project, dic_proState WHERE ps_id = pro_stateId and pro_companyId = #{0};
+    </select>
+    <select id="getCompanyByStaffId" resultType="Company">
+        SELECT company_id as id, company_name as name, company_address as address, company_phone as phone,
+        company_email as email, company_bossId as bossId FROM bus_company WHERE company_id = (SELECT staff_companyId FROM bus_staff WHERE staff_id = #{0});
+    </select>
+    <select id="getImgPathByProjectId" resultType="String">
+        SELECT pro_imgPath FROM bus_project WHERE pro_id = #{0};
+    </select>
+    <select id="updateImgPathByProjectId">
+        UPDATE bus_project SET pro_imgPath = #{1} WHERE pro_id = #{0};
+    </select>
+    <select id="selectProjectByName" resultType="Project">
+        SELECT pro_id as id, pro_name as name, pro_desc as description, pro_planNum as planNum, pro_currentNum as currentNum,
+        pro_planMoney as planMoney, pro_currentMoney as currentMoney, pro_companyId as companyId, pro_imgPath as imgPath, ps_name as state from bus_project, dic_proState
+        WHERE ps_id = pro_stateId AND pro_name LIKE "%"#{0}"%";
+    </select>
+    <select id="getClientByContractId" resultType="Client">
+        SELECT cli_id as id, cli_name as name, cli_company as company, cli_phone as phone, cli_address as address
+        FROM bus_client WHERE cli_id = (SELECT cont_clientId FROM bus_contract WHERE cont_id = #{0});
+    </select>
+    <select id="getSimpleProjectListByCompanyId" resultType="Project">
+        SELECT pro_name as name FROM bus_project WHERE pro_id = #{0};
+    </select>
+    <select id="getClientListByCompanyId" resultType="Client">
+        SELECT cli_id as id, cli_name as name, cli_address as address, cli_phone as phone, cli_company as company,
+        cli_companyId as companyId FROM bus_client WHERE cli_companyId = #{0};
+    </select>
+    <insert id="addClient" parameterType="Client">
+        INSERT INTO bus_client(cli_name, cli_phone, cli_address, cli_company, cli_companyId) VALUES (#{name},
+        #{phone}, #{address}, #{company}, #{companyId});
+    </insert>
 </mapper>

@@ -1,21 +1,17 @@
 package com.propertyManagement.controller.staffManagement;
 
-import com.propertyManagement.pojo.Authentication;
-import com.propertyManagement.pojo.Project;
-import com.propertyManagement.pojo.Staff;
-import com.propertyManagement.pojo.Task;
+import com.propertyManagement.pojo.*;
 import com.propertyManagement.service.Login.AuthenticationService;
 import com.propertyManagement.service.projectManagement.ProjectService;
 import com.propertyManagement.service.projectManagement.TaskService;
 import com.propertyManagement.service.staffManagement.StaffService;
-import com.propertyManagement.util.TaskCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
@@ -30,15 +26,23 @@ public class StaffController {
     @Autowired
     private TaskService taskService;
 
-    //获取员工列表
+    //获取公司所有员工
     @SuppressWarnings("unchecked")
-    @RequestMapping("getStaffList")
     @ResponseBody
-    public Map getStaffList(){
+    @RequestMapping("getStaffListByCompanyId")
+    public Map getStaffListByCompanyId(@RequestParam("companyId") int companyId,
+                                       @RequestParam("positionId") int positionId,
+                                       @RequestParam("ascend") boolean ascend,
+                                       @RequestParam("sex") String sex){
+        ParameterList parameterList = new ParameterList();
+        parameterList.setSex(sex);
+        parameterList.setAscend(ascend);
+        parameterList.setPositionId(positionId);
+        parameterList.setCompanyId(companyId);
+        List<Staff> staffList = staffService.getStaffListByCompanyId(parameterList);
         Map map = new HashMap();
-        map.put("status",1);
-        List<Staff> staffList = staffService.getStaffList();
-        map.put("staffList",staffList);
+        map.put("status", 1);
+        map.put("staffList", staffList);
         return map;
     }
 
@@ -97,18 +101,6 @@ public class StaffController {
         return map;
     }
 
-    //获取公司所有员工
-    @SuppressWarnings("unchecked")
-    @ResponseBody
-    @RequestMapping("getStaffListByCompanyId")
-    public Map getStaffListByCompanyId(@RequestParam("companyId") int companyId){
-        Map map = new HashMap();
-        List<Staff> staffList = staffService.getStaffListByCompanyId(companyId);
-        map.put("status", 1);
-        map.put("staffList", staffList);
-        return map;
-    }
-
     //依据员工姓名模糊查询员工
     @SuppressWarnings("unchecked")
     @ResponseBody
@@ -124,9 +116,10 @@ public class StaffController {
     //获取公司所有项目列表，以及每个项目对应的岗位列表，以及员工相关联的岗位
     @SuppressWarnings("unchecked")
     @ResponseBody
-    @RequestMapping("getMyTaskList")
-    public Map getMyTaskList(@RequestParam("staffId") int staffId){
-        List<Project> projectList = projectService.getProjects();
+    @RequestMapping("getProjectListAndTaskList")
+    public Map getProjectListAndTaskList(@RequestParam("staffId") int staffId,
+                                         @RequestParam("companyId") int companyId){
+        List<Project> projectList = projectService.getProjectListByCompanyId(companyId);
         List<List<Task>> taskList = new ArrayList<>();
         Map<Integer, List<Integer>> nowTaskListMap = new HashMap();
         for(int i = 0; i < projectList.size(); i++){
@@ -200,4 +193,33 @@ public class StaffController {
         return map;
     }
 
+    //添加员工
+    @SuppressWarnings("unchecked")
+    @ResponseBody
+    @RequestMapping("addStaff")
+    public Map addStaff(@RequestParam("name") String name,
+                        @RequestParam("phone") String phone,
+                        @RequestParam("idCard") String idCard,
+                        @RequestParam("sex") String sex,
+                        @RequestParam("position") String position,
+                        @RequestParam("birthDate") String birthDate,
+                        @RequestParam("workDate") String workDate,
+                        @RequestParam("companyId") int companyId,
+                        @RequestParam("avatarUrl") String avatarUrl) throws ParseException{
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        Staff staff = new Staff();
+        staff.setName(name);
+        staff.setPhone(phone);
+        staff.setCompanyId(companyId);
+        staff.setWorkDate(new java.sql.Date(sdf.parse(workDate).getTime()));
+        staff.setBirthDate(new java.sql.Date(sdf.parse(birthDate).getTime()));
+        staff.setIdCard(idCard);
+        staff.setSex(sex);
+        staff.setPosition(position);
+        staff.setAvatarUrl(avatarUrl);
+        staffService.addStaff(staff);
+        Map map = new HashMap();
+        map.put("status", 1);
+        return map;
+    }
 }

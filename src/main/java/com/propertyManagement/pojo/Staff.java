@@ -14,8 +14,9 @@ public class Staff {
     private Date birthDate;
     private Date workDate;
     private int type;
-    private int position;
+    private String position;
     private int taskId;
+    private String avatarUrl;
 
     public int getId() {
         return id;
@@ -91,11 +92,11 @@ public class Staff {
         this.type = type;
     }
 
-    public int getPosition() {
+    public String getPosition() {
         return position;
     }
 
-    public void setPosition(int position) {
+    public void setPosition(String position) {
         this.position = position;
     }
 
@@ -105,5 +106,13 @@ public class Staff {
 
     public void setTaskId(int taskId) {
         this.taskId = taskId;
+    }
+
+    public String getAvatarUrl() {
+        return avatarUrl;
+    }
+
+    public void setAvatarUrl(String avatarUrl) {
+        this.avatarUrl = avatarUrl;
     }
 }

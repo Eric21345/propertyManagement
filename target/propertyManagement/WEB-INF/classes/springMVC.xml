@@ -2,10 +2,10 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
-       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:aop="http://www.springframework.org/schema/aop"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.0.xsd
-       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
+       http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
     <!--启动注解识别-->
     <context:annotation-config/>
@@ -31,4 +31,23 @@
 
     <bean class="com.propertyManagement.config.SwaggerConfig"/>
     <mvc:resources mapping="/swagger/**" location="/WEB-INF/swagger/"/>
+
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+    <!--拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/phoneLogin" />
+            <mvc:exclude-mapping path="/wxLogin" />
+            <bean class="com.propertyManagement.util.TokenInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
+
+    <bean id="myHandlerExceptionResolver" class="com.propertyManagement.util.exception.MyHandlerExceptionResolver"/>
+
+    <context:component-scan base-package="com.propertyManagement.util.exception" use-default-filters="false">
+        <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+        <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.ControllerAdvice"/>
+    </context:component-scan>
 </beans>
